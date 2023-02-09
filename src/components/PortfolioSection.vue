@@ -3,9 +3,12 @@
         <h2 class="portfolio-section__title">Приложения</h2>
         <ul class="container portfolio-section__list">
 
-            <portfolio-item />
-            <portfolio-item />
-            <portfolio-item />
+            <portfolio-item 
+                v-for="project in projects" 
+                :key="project.id" 
+                :title="project.title" 
+                :image="project.image" 
+            />
 
 <!-- 
             <li class="portfolio__item">
@@ -79,7 +82,33 @@ import PortfolioItem from '@/components/PortfolioItem.vue';
 
 export default {
     name: 'PortfolioSection',
-    components: { PortfolioItem }
+    components: { PortfolioItem },
+    data() {
+        return {
+            projects: [
+                {
+                    id: 1,
+                    title: 'Резюме',
+                    image: 'resume'
+                },
+                {
+                    id: 2,
+                    title: 'Органайзер',
+                    image: 'organizer'
+                },
+                {
+                    id: 3,
+                    title: 'Speak-Art73',
+                    image: 'speak-art73'
+                },
+                {
+                    id: 4,
+                    title: 'Like73',
+                    image: 'like73'
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -108,6 +137,8 @@ $mobile-max: 767px;
     }
     &__list {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 </style>
