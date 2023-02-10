@@ -39,12 +39,16 @@ $tablet-max: 1023px;
 $tablet-min: 768px;
 $mobile-max: 767px;
 
+$beige: #fffae4;
+$zian: rgb(37, 69, 129);
+
 .header {
-    background-color: rgb(68, 92, 227);
-    color: white;
+    background-color: $zian;
+    color: $beige;
     padding: 64px;
     display: flex;   
     justify-content: space-between;
+    border-bottom: 1px solid grey;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         padding: 32px;
     }     
@@ -52,7 +56,8 @@ $mobile-max: 767px;
         padding: 32px;
     }      
     @media (max-width: $mobile-max) {
-        padding: 16px;
+        border-bottom: none;        
+        padding: 16px 16px 0;
         flex-direction: column;        
     }     
 }
@@ -98,7 +103,7 @@ $mobile-max: 767px;
         margin-bottom: 16px;        
     }
     p {
-        font-size: 20px;        
+        font-size: 16px;        
         font-weight: 400;
         @media (max-width: $mobile-max) {
             font-size: 16px;  
@@ -109,10 +114,15 @@ $mobile-max: 767px;
     h3 {
         font-size: 18px;        
         font-weight: 400;  
-        margin-bottom: 16px;               
+        margin-bottom: 16px; 
+        text-decoration: underline;              
+    }
+    ul {
+        padding: 0 32px;
     }
     li {
         font-size: 16px;
+        font-style: italic;
         margin-bottom: 8px;         
     }
     a {

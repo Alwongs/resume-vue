@@ -1,13 +1,14 @@
 <template>
     <section class="portfolio-section">
         <h2 class="portfolio-section__title">Приложения</h2>
-        <ul class="container portfolio-section__list">
+        <ul class="portfolio-section__list">
 
             <portfolio-item 
                 v-for="project in projects" 
                 :key="project.id" 
                 :title="project.title" 
                 :image="project.image" 
+                class="portfolio-section__item"
             />
 
 <!-- 
@@ -120,6 +121,9 @@ $tablet-max: 1023px;
 $tablet-min: 768px;
 $mobile-max: 767px;
 
+$beige: #fffae4;
+$zian: rgb(31, 61, 116);
+
 @mixin title {
     font-weight: 500;
     margin-bottom: 32px;
@@ -131,7 +135,11 @@ $mobile-max: 767px;
 }
 
 .portfolio-section {
+    color: $zian;
     padding: 32px;
+    @media (max-width: $mobile-max) {
+        padding: 16px;
+    }      
     &__title {
         @include title;
     }
@@ -139,6 +147,12 @@ $mobile-max: 767px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    &__item {
+        margin: 0 44px 44px 0;
+        @media (max-width: $mobile-max) {
+            margin: 0 0 44px 0;
+        }                 
     }
 }
 </style>

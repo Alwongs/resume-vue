@@ -25,19 +25,21 @@ $tablet-max: 1023px;
 $tablet-min: 768px;
 $mobile-max: 767px;
 
+$zian: rgb(37, 69, 129);
+
 .info__skill-list {
-    background-color: rgb(68, 92, 227);
+    background-color: $zian;
     border-bottom: 1px solid green;
     padding: 6px 64px;
     display: flex;
-    font-style: italic;
     flex-wrap: wrap;
     @media (max-width: $mobile-max) {
         padding: 6px 16px;      
     }    
 }
 .info__skill-list li {
-    margin-right: 16px;
+    margin-right: 32px;
     color: yellow;
+    font-size: 17px;
 }
 </style>

@@ -69,6 +69,8 @@ $tablet-max: 1023px;
 $tablet-min: 768px;
 $mobile-max: 767px;
 
+$beige: #fffae4;
+
 * {
     margin: 0;
     padding: 0;
@@ -76,7 +78,7 @@ $mobile-max: 767px;
     font-family: 'Roboto';
 }
 html, body {
-    background-color: #fffae4;
+    background-color: $beige;
     height: 100vh;
     font-size: 20px;
     color: rgb(52, 54, 61)

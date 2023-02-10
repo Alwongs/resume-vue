@@ -42,6 +42,9 @@ $tablet-max: 1023px;
 $tablet-min: 768px;
 $mobile-max: 767px;
 
+$beige: #fffae4;
+$zian: rgb(37, 69, 129);
+
 
 //-------------------------
 .portfolio-item {
@@ -50,7 +53,6 @@ $mobile-max: 767px;
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 20px;
-    margin: 0 44px 44px 0;
     overflow: hidden;
     &:hover {
         box-shadow: 1px 1px 10px 3px rgba(0, 136, 255, 0.5);        
@@ -60,11 +62,11 @@ $mobile-max: 767px;
     // }   
 }
 .portfolio-item__header {
-    background-color: rgb(68, 92, 227);
+    background-color: $zian;
     border-bottom: 1px solid white;
     height: 32px;
     line-height: 32px;        
-    color: white;       
+    color: $beige;       
 }
 .portfolio-item__title {
     text-align: center;
@@ -89,7 +91,7 @@ $mobile-max: 767px;
 }
 
 .portfolio-item__footer {
-    background-color: rgb(68, 92, 227);
+    background-color: $zian;
     border-top: 1px solid white;
     height: 32px;
     line-height: 32px;        
