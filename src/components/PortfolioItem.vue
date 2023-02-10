@@ -47,7 +47,7 @@ $mobile-max: 767px;
 .portfolio-item {
     width: 300px;
     height: 200px;
-    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.4);
     border: 2px solid white;
     border-radius: 20px;
     margin: 0 44px 44px 0;

@@ -1,16 +1,26 @@
 <template>
     <header class="header">
-        <div class="container flex-wrap"> 
+        <div class="header__left">
             <div class="header__image">
                 <img src="@/assets/images/me.jpg" alt="photo">
             </div> 
+
             <div class="header__info">         
-                <h1>Винни Пух</h1>
-                <h2>web-разработчик</h2>
-                <h3>45 лет</h3>
-                <p>Урюпинск</p>
+                <h1>Мартынов<br>Александр</h1>
+                <h2>web-разработчик<br><small>(без опыта)</small></h2>
+                <p>г.Ульяновск</p>
             </div>
         </div>
+
+        <div class="header__contacts">
+            <h3>Контакты:</h3> 
+            <ul>
+                <li>Тел: <a href="tel:+79370000000">+7(937)-000-00-00</a></li>
+                <li>email: <a href="mailto:mail@ya.ru">mail@ya.ru</a></li>
+                <li><a href="whatsapp://send?phone=79370000000&amp;text=">WhatsApp</a></li>
+                <li><a href="viber://chat?number=%2B79370000000">Viber</a></li>
+            </ul> 
+        </div>       
     </header>  
 </template>
 
@@ -32,43 +42,85 @@ $mobile-max: 767px;
 .header {
     background-color: rgb(68, 92, 227);
     color: white;
-    padding: 64px 0;
-    h1 {
-        font-weight: 400;
-    }
-    h2 {
-        font-weight: 400;
-        margin-bottom: 24px;
-    }
-    p {
-        font-size: 130%;
-        font-weight: 300;
-    }
+    padding: 64px;
+    display: flex;   
+    justify-content: space-between;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 32px 0;
+        padding: 32px;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 32px 0;
+        padding: 32px;
     }      
     @media (max-width: $mobile-max) {
-        padding: 16px 0;
+        padding: 16px;
+        flex-direction: column;        
     }     
 }
-.flex-wrap {
-    display: flex;
+.header__left {
+    display: flex; 
     @media (max-width: $mobile-max) {
-        flex-direction: column;
-    } 
+        border-bottom: 1px solid grey;
+        margin-bottom: 8px;
+    }     
 }
-.header__image {
-    height: 200px;
-    margin-right: 32px;
+.header__image {   
+    height: 160px;
+    margin-right: 24px;
     @media (max-width: $mobile-max) {
+        margin-right: 12px;        
         margin-bottom: 16px;
     } 
     img {
         height: 100%;
         border: 1px solid white;
     }
+}
+
+.header__info {
+
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        margin-bottom: 16px;
+        letter-spacing: 1.5px;       
+    }
+    h2 {
+        font-size: 20px;        
+        font-weight: 400;
+        margin-bottom: 16px;
+        @media (max-width: $mobile-max) {
+            font-size: 16px;  
+        }         
+    }
+    h3 {
+        font-size: 20px;        
+        font-weight: 400;
+        margin-bottom: 16px;        
+    }
+    p {
+        font-size: 20px;        
+        font-weight: 400;
+        @media (max-width: $mobile-max) {
+            font-size: 16px;  
+        }        
+    }    
+}
+.header__contacts {
+    h3 {
+        font-size: 18px;        
+        font-weight: 400;  
+        margin-bottom: 16px;               
+    }
+    li {
+        font-size: 16px;
+        margin-bottom: 8px;         
+    }
+    a {
+        color: white;   
+    }
+    @media (max-width: $mobile-max) {
+        border-bottom: 1px solid grey;
+        padding-bottom: 8px;         
+    }     
 }
 </style>
