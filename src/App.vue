@@ -2,14 +2,14 @@
     <app-header />
     <info-section />
     <portfolio-section />
-    <app-footer />
+    <!-- <app-footer /> -->
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
 import InfoSection from '@/components/InfoSection.vue';
 import PortfolioSection from '@/components/PortfolioSection.vue';
-import AppFooter from '@/components/AppFooter.vue';
+// import AppFooter from '@/components/AppFooter.vue';
 
 export default {
     name: 'App',
@@ -17,7 +17,7 @@ export default {
         AppHeader,
         InfoSection,
         PortfolioSection,
-        AppFooter
+        // AppFooter
     }
 }
 </script>

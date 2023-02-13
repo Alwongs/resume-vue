@@ -4,6 +4,9 @@
             <h3 class="portfolio-item__title">{{ title }}</h3>
         </header>
         <main class="portfolio-item__main">
+            <div class="portfolio-item__main-cover" @click="goTo()">
+                {{ description }}
+            </div>
             <div class="portfolio-item__image-block">
                 <img :src="require(`@/assets/images/preview/${image}.jpg`)" alt="image">
             </div>
@@ -33,12 +36,23 @@ export default {
         return {
 
         }
+    },
+    methods: {
+        goTo() {
+            window.open(this.website,'_blank');
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
 /* ---- screen sizes ---- */
+
+// SCSS
+@function darker($color, $tone) {
+  $adjust: -16*$tone;
+  @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
 
 $desktop-max: 1439px;
 $desktop-min: 1024px;
@@ -47,7 +61,7 @@ $tablet-min: 768px;
 $mobile-max: 767px;
 
 $beige: #fffae4;
-$zian: rgb(0, 120, 112);
+$project-item-color: rgb(0, 120, 112);
 
 
 //-------------------------
@@ -60,13 +74,10 @@ $zian: rgb(0, 120, 112);
     overflow: hidden;
     &:hover {
         box-shadow: 1px 1px 10px 3px rgba(0, 136, 255, 0.5);        
-    }
-    // @media (max-width: $mobile-max) {
-    //     flex-direction: column;
-    // }   
+    }  
 }
 .portfolio-item__header {
-    background-color: $zian;
+    background-color: $project-item-color;
     border-bottom: 1px solid white;
     height: 32px;
     line-height: 32px;        
@@ -78,14 +89,35 @@ $zian: rgb(0, 120, 112);
     font-weight: normal;  
 }
 .portfolio-item__main {
+    position: relative;
     height: 132px; 
-    display: flex;
+    display: flex;  
+}
+.portfolio-item__main-cover {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0; 
+    bottom: 0;
+    padding: 8px;
+    font-size: 16px;
+    font-style: italic;
+    background-color: transparent;
+    color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.94);
+        color: darker($project-item-color, 4);
+    }      
 }
 .portfolio-item__image-block {
     height: 132px;
-    border-right: 2px solid $zian;
+    border-right: 2px solid $project-item-color;
     margin-right: 4px;
+    padding: 10px;
     img {
+        border: 1px solid $project-item-color;
         height: 100%;
     } 
 }
@@ -99,7 +131,7 @@ $zian: rgb(0, 120, 112);
 .portfolio-item__footer {
     display: flex;
     justify-content: space-between;
-    background-color: $zian;
+    background-color: $project-item-color;
     border-top: 1px solid white;
     height: 32px;
     line-height: 32px;        

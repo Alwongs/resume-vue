@@ -30,9 +30,15 @@ $zian: rgb(37, 69, 129);
 .info__skill-list {
     background-color: $zian;
     border-bottom: 1px solid green;
-    padding: 6px 64px;
+    padding: 6px 128px;
     display: flex;
     flex-wrap: wrap;
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+        padding: 6px 64px;
+    }     
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        padding: 6px 64px;
+    }     
     @media (max-width: $mobile-max) {
         padding: 6px 16px;      
     }    

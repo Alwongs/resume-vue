@@ -135,7 +135,7 @@ export default {
                         },                         
                         {
                             id: 2,
-                            title: 'css'
+                            title: 'scss'
                         },                         
                         {
                             id: 3,
@@ -146,33 +146,6 @@ export default {
 
                 {
                     id: 7,
-                    title: 'Weather',
-                    image: 'no-photo',
-                    github: 'https://github.com/Alwongs/gulp-2022-weather',
-                    website: 'https://alwongs.github.io/gulp-2022-weather/',
-                    description: 'Получение прогноза погоды по выбранному городу',
-                    stack: [
-                        {
-                            id: 1,
-                            title: 'html'
-                        },                         
-                        {
-                            id: 2,
-                            title: 'scss'
-                        },                         
-                        {
-                            id: 3,
-                            title: 'javascript'
-                        },                         
-                        {
-                            id: 4,
-                            title: 'gulp'
-                        },                         
-                    ]
-                },
-
-                {
-                    id: 8,
                     title: 'Waybills',
                     image: 'waybills',
                     github: 'https://github.com/Alwongs/ways-auth',
@@ -226,10 +199,17 @@ $zian: rgb(31, 61, 116);
 
 .portfolio-section {
     color: $zian;
-    padding: 32px;
+    padding: 32px 128px 0;
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+        padding: 32px 64px 0;
+    }     
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        padding: 32px 64px 0;
+    }     
     @media (max-width: $mobile-max) {
         padding: 16px;
-    }      
+    }  
+
     &__title {
         @include title;
     }

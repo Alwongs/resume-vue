@@ -45,15 +45,15 @@ $zian: rgb(37, 69, 129);
 .header {
     background-color: $zian;
     color: $beige;
-    padding: 64px;
+    padding: 32px 128px;
     display: flex;   
     justify-content: space-between;
     border-bottom: 1px solid rgb(75, 91, 112);
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 32px;
+        padding: 32px 64px;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 32px;
+        padding: 32px 64px;
     }      
     @media (max-width: $mobile-max) {
         border-bottom: none;        
