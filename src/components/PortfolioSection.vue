@@ -148,8 +148,8 @@ export default {
                     id: 7,
                     title: 'Weather',
                     image: 'no-photo',
-                    github: 'https://github.com/Alwongs/api-open-weather',
-                    website: 'https://alwongs.github.io/api-open-weather/',
+                    github: 'https://github.com/Alwongs/gulp-2022-weather',
+                    website: 'https://alwongs.github.io/gulp-2022-weather/',
                     description: 'Получение прогноза погоды по выбранному городу',
                     stack: [
                         {
