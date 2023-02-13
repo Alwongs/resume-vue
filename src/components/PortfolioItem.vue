@@ -7,16 +7,20 @@
             <div class="portfolio-item__image-block">
                 <img :src="require(`@/assets/images/preview/${image}.jpg`)" alt="image">
             </div>
-            <ul class="portfolio-item__stack-list">
-                <h6>Стэк:</h6>
-                <li>- one</li>
-                <li>- two</li>
-                <li>- three</li>
-                <li>- four</li>
-            </ul>
+            <div class="portfolio-item__stack-list">
+                <ol>
+                    <li 
+                        v-for="tech in stack" 
+                        :key="tech.id"
+                    >
+                        {{ tech.title }}
+                    </li>
+                </ol>
+            </div>
         </main>
         <footer class="portfolio-item__footer">
-            <p>Подробнее</p>
+            <a :href="github" target="_blank">github</a>
+            <a :href="website" target="_blank">website</a>
         </footer>
     </li>  
 </template>
@@ -24,7 +28,7 @@
 <script>
 export default {
     name: 'PortfolioItem',
-    props: [ 'title', 'image'],
+    props: [ 'title', 'image', 'github', 'website', 'description', 'stack'],
     data() {
         return {
 
@@ -43,7 +47,7 @@ $tablet-min: 768px;
 $mobile-max: 767px;
 
 $beige: #fffae4;
-$zian: rgb(37, 69, 129);
+$zian: rgb(0, 120, 112);
 
 
 //-------------------------
@@ -79,6 +83,8 @@ $zian: rgb(37, 69, 129);
 }
 .portfolio-item__image-block {
     height: 132px;
+    border-right: 2px solid $zian;
+    margin-right: 4px;
     img {
         height: 100%;
     } 
@@ -91,16 +97,24 @@ $zian: rgb(37, 69, 129);
 }
 
 .portfolio-item__footer {
+    display: flex;
+    justify-content: space-between;
     background-color: $zian;
     border-top: 1px solid white;
     height: 32px;
     line-height: 32px;        
     padding: 0 16px;
     color: white;
-    p {
-        font-size: 12px;
-        text-align: right;
-        cursor: pointer;
+    a {
+        font-size: 13px;
+        color: $beige;
+        letter-spacing: 0.7px;
+        text-decoration: none;
+        &:hover {
+            color: yellow;
+            transition: 0.2s;
+            letter-spacing: 0.8px;            
+        }
     }
 }
 </style>

@@ -1,13 +1,8 @@
 <template>
-
     <app-header />
-
     <info-section />
-
     <portfolio-section />
-
     <app-footer />
-
 </template>
 
 <script>

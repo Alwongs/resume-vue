@@ -48,7 +48,7 @@ $zian: rgb(37, 69, 129);
     padding: 64px;
     display: flex;   
     justify-content: space-between;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(75, 91, 112);
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         padding: 32px;
     }     

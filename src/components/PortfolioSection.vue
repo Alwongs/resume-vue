@@ -2,78 +2,17 @@
     <section class="portfolio-section">
         <h2 class="portfolio-section__title">Приложения</h2>
         <ul class="portfolio-section__list">
-
             <portfolio-item 
                 v-for="project in projects" 
                 :key="project.id" 
                 :title="project.title" 
                 :image="project.image" 
+                :github="project.github" 
+                :website="project.website" 
+                :description="project.description" 
+                :stack="project.stack"
                 class="portfolio-section__item"
             />
-
-<!-- 
-            <li class="portfolio__item">
-                <h3 class="">"Organizer"</h3>
-                <ul class="">
-                    <li><a href="https://github.com/Alwongs/SPA-auth-Organizer">GitHub</a></li>
-                    <li><a href="http://o937876j.beget.tech">Посмотреть web-сайт</a></li>
-                    <li><p>Органайзер содержит несколько приложений для тайм-менеджмента</p></li>
-                </ul>
-            </li>
-
-            <li class="portfolio__item">
-                <h3>"Speak-art73"</h3>
-                <ul>
-                    <li><a href="https://github.com/Alwongs/speak-art73">GitHub</a></li>
-                    <li><a href="https://alwongs.github.io/speak-art73/">Посмотреть web-сайт</a></li>
-                    <li><p>Школа Английского и Китайского языков</p></li>
-                </ul>
-            </li>
-
-            <li class="portfolio__item">
-                <h3>"Like"</h3>
-                <ul>
-                    <li><a href="https://github.com/Alwongs/like">GitHub</a></li>
-                    <li><a href="https://alwongs.github.io/like/">Посмотреть web-сайт</a></li>
-                    <li><p>Клуб активного отдыха</p></li>
-                </ul>
-            </li>
-
-            <li class="portfolio__item">
-                <h3>"Links"</h3>
-                <ul>
-                    <li><a href="https://github.com/Alwongs/links">GitHub</a></li>
-                    <li><a href="https://alwongs.github.io/links/">Посмотреть web-сайт</a></li>
-                    <li><p>Архив полезных ссылок по категориям</p></li>
-                </ul>
-            </li>
-
-            <li class="portfolio__item">
-                <h3>"U-Talent"</h3>
-                <ul>
-                    <li><a href="https://github.com/Alwongs/u-talent">GitHub</a></li>
-                    <li><a href="https://alwongs.github.io/u-talent/">Посмотреть web-сайт</a></li>
-                    <li><p>Афиша конкурса читателей на английском языке</p></li>
-                </ul>
-            </li>
-
-            <li class="portfolio__item">
-                <h3>"Weather"</h3>
-                <ul>
-                    <li><a href="https://github.com/Alwongs/api-open-weather">GitHub</a></li>
-                    <li><a href="https://alwongs.github.io/api-open-weather/">Посмотреть web-сайт</a></li>
-                    <li><p>Получение прогноза погоды по выбранному городу</p></li>
-                </ul>
-            </li>
-
-            <li class="portfolio__item">
-                <h3>"Waybills"</h3>
-                <ul>
-                    <li><a href="https://github.com/Alwongs/ways-auth">GitHub</a></li>
-                    <li><a href="http://alwong.h1n.ru/">Посмотреть web-сайт</a> (регистрация на сайте временно не работает)</li>
-                    <li><p>Генерация путевого листа автомобиля и отправка на печать</p></li>
-                </ul>
-            </li> -->
         </ul>
     </section>
 </template>
@@ -90,22 +29,173 @@ export default {
                 {
                     id: 1,
                     title: 'Резюме',
-                    image: 'resume'
+                    image: 'resume',
+                    github: 'https://github.com/Alwongs/resume-vue',
+                    website: 'https://alwongs.github.io/resume-vue/',
+                    description: 'Информация о разработчике',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'Vue.js'
+                        },
+                    ]
                 },
+
                 {
                     id: 2,
                     title: 'Органайзер',
-                    image: 'organizer'
+                    image: 'organizer',
+                    github: 'https://github.com/Alwongs/SPA-auth-Organizer',
+                    website: 'http://o937876j.beget.tech',
+                    description: 'Органайзер содержит несколько приложений для тайм-менеджмента',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'Vue.js'
+                        },                        
+                        {
+                            id: 2,
+                            title: 'Vuetify'
+                        },                        
+                        {
+                            id: 3,
+                            title: 'Laravel'
+                        },                        
+                        {
+                            id: 3,
+                            title: 'beget.tech'
+                        },                        
+                    ]
                 },
+
                 {
                     id: 3,
                     title: 'Speak-Art73',
-                    image: 'speak-art73'
+                    image: 'speak-art73',
+                    github: 'https://github.com/Alwongs/speak-art73',
+                    website: 'https://alwongs.github.io/speak-art73/',
+                    description: 'Школа Английского и Китайского языков',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'Vue.js'
+                        },                         
+                    ]
                 },
+
                 {
                     id: 4,
                     title: 'Like73',
-                    image: 'like73'
+                    image: 'like73',
+                    github: 'https://github.com/Alwongs/like',
+                    website: 'https://alwongs.github.io/like/',
+                    description: 'Клуб активного отдыха',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'Vue.js'
+                        },                         
+                        {
+                            id: 2,
+                            title: 'Firebase'
+                        },                         
+                    ]
+                },
+
+                {
+                    id: 5,
+                    title: 'Links',
+                    image: 'links',
+                    github: 'https://github.com/Alwongs/links',
+                    website: 'https://alwongs.github.io/links/',
+                    description: 'Архив полезных ссылок по категориям',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'Vue.js'
+                        },                         
+                        {
+                            id: 2,
+                            title: 'Firebase'
+                        },                         
+                    ]
+                },
+
+                {
+                    id: 6,
+                    title: 'U-Talent',
+                    image: 'u-talent',
+                    github: 'https://github.com/Alwongs/u-talent',
+                    website: 'https://alwongs.github.io/u-talent/',
+                    description: 'Конкурс читателей на английском языке',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'html'
+                        },                         
+                        {
+                            id: 2,
+                            title: 'css'
+                        },                         
+                        {
+                            id: 3,
+                            title: 'javascript'
+                        },                         
+                    ]
+                },
+
+                {
+                    id: 7,
+                    title: 'Weather',
+                    image: 'no-photo',
+                    github: 'https://github.com/Alwongs/api-open-weather',
+                    website: 'https://alwongs.github.io/api-open-weather/',
+                    description: 'Получение прогноза погоды по выбранному городу',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'html'
+                        },                         
+                        {
+                            id: 2,
+                            title: 'scss'
+                        },                         
+                        {
+                            id: 3,
+                            title: 'javascript'
+                        },                         
+                        {
+                            id: 4,
+                            title: 'gulp'
+                        },                         
+                    ]
+                },
+
+                {
+                    id: 8,
+                    title: 'Waybills',
+                    image: 'waybills',
+                    github: 'https://github.com/Alwongs/ways-auth',
+                    website: 'http://alwong.h1n.ru/',
+                    description: 'Подготовка путевых листов автомобилей',
+                    stack: [
+                        {
+                            id: 1,
+                            title: 'Vue.js'
+                        },                         
+                        {
+                            id: 2,
+                            title: 'scss'
+                        },                         
+                        {
+                            id: 3,
+                            title: 'laravel'
+                        },                         
+                        {
+                            id: 4,
+                            title: 'hostiman.ru'
+                        },                         
+                    ]
                 },
             ]
         }
@@ -151,6 +241,7 @@ $zian: rgb(31, 61, 116);
     &__item {
         margin: 0 44px 44px 0;
         @media (max-width: $mobile-max) {
+            min-width: 51%;
             margin: 0 0 44px 0;
         }                 
     }
