@@ -2,7 +2,9 @@
     <header class="header">
         <div class="header__left">
             <div class="header__image">
-                <img src="@/assets/images/me.jpg" alt="photo">
+                <router-link :to="{name: 'home'}">
+                    <img src="@/assets/images/me.jpg" alt="photo">
+                </router-link>
             </div> 
 
             <div class="header__info">         

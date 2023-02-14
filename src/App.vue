@@ -1,23 +1,19 @@
 <template>
     <app-header />
     <info-section />
-    <portfolio-section />
-    <!-- <app-footer /> -->
+
+    <router-view></router-view>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
 import InfoSection from '@/components/InfoSection.vue';
-import PortfolioSection from '@/components/PortfolioSection.vue';
-// import AppFooter from '@/components/AppFooter.vue';
 
 export default {
     name: 'App',
     components: {
         AppHeader,
         InfoSection,
-        PortfolioSection,
-        // AppFooter
     }
 }
 </script>

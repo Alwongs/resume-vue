@@ -2,15 +2,18 @@
     <section class="portfolio-section">
         <h2 class="portfolio-section__title">Приложения</h2>
         <ul class="portfolio-section__list">
-            <portfolio-item 
+            <project-item 
                 v-for="project in projects" 
                 :key="project.id" 
+                :id="project.id" 
                 :title="project.title" 
                 :image="project.image" 
                 :github="project.github" 
                 :website="project.website" 
                 :description="project.description" 
                 :stack="project.stack"
+
+                :project="project"
                 class="portfolio-section__item"
             />
         </ul>
@@ -18,30 +21,15 @@
 </template>
 
 <script>
-import PortfolioItem from '@/components/PortfolioItem.vue';
+import ProjectItem from '@/components/ProjectItem.vue';
 
 export default {
-    name: 'PortfolioSection',
-    components: { PortfolioItem },
+    name: 'ProjectList',
+    components: { ProjectItem },
     data() {
         return {
             projects: [
-                {
-                    id: 1,
-                    title: 'Резюме',
-                    image: 'resume',
-                    github: 'https://github.com/Alwongs/resume-vue',
-                    website: 'https://alwongs.github.io/resume-vue/',
-                    description: 'Информация о разработчике',
-                    stack: [
-                        {
-                            id: 1,
-                            title: 'Vue.js'
-                        },
-                    ]
-                },
-
-                {
+                { // id: 2; Organizer
                     id: 2,
                     title: 'Органайзер',
                     image: 'organizer',
@@ -68,7 +56,7 @@ export default {
                     ]
                 },
 
-                {
+                { // id: 3; Speak-art73
                     id: 3,
                     title: 'Speak-Art73',
                     image: 'speak-art73',
@@ -83,7 +71,7 @@ export default {
                     ]
                 },
 
-                {
+                { // id: 4; Like73
                     id: 4,
                     title: 'Like73',
                     image: 'like73',
@@ -102,7 +90,7 @@ export default {
                     ]
                 },
 
-                {
+                { // id:5; Links
                     id: 5,
                     title: 'Links',
                     image: 'links',
@@ -121,7 +109,7 @@ export default {
                     ]
                 },
 
-                {
+                { // id: 6; U-talent
                     id: 6,
                     title: 'U-Talent',
                     image: 'u-talent',
@@ -144,7 +132,7 @@ export default {
                     ]
                 },
 
-                {
+                { // id: 7; Waybills
                     id: 7,
                     title: 'Waybills',
                     image: 'waybills',

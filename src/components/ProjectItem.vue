@@ -1,19 +1,19 @@
 <template>
     <li class="portfolio-item">
         <header class="portfolio-item__header">
-            <h3 class="portfolio-item__title">{{ title }}</h3>
+            <h3 class="portfolio-item__title">{{ project.title }}</h3>
         </header>
         <main class="portfolio-item__main">
             <div class="portfolio-item__main-cover" @click="goTo()">
-                {{ description }}
+                {{ project.description }}
             </div>
             <div class="portfolio-item__image-block">
-                <img :src="require(`@/assets/images/preview/${image}.jpg`)" alt="image">
+                <img :src="require(`@/assets/images/preview/${project.image}.jpg`)" alt="image">
             </div>
             <div class="portfolio-item__stack-list">
                 <ol>
                     <li 
-                        v-for="tech in stack" 
+                        v-for="tech in project.stack" 
                         :key="tech.id"
                     >
                         {{ tech.title }}
@@ -22,24 +22,19 @@
             </div>
         </main>
         <footer class="portfolio-item__footer">
-            <a :href="github" target="_blank">github</a>
-            <a :href="website" target="_blank">website</a>
+            <a :href="project.github">github</a>
+            <a :href="project.website">website</a>
         </footer>
     </li>  
 </template>
 
 <script>
 export default {
-    name: 'PortfolioItem',
-    props: [ 'title', 'image', 'github', 'website', 'description', 'stack'],
-    data() {
-        return {
-
-        }
-    },
+    name: 'ProjectItem',
+    props: ['project'],
     methods: {
         goTo() {
-            window.open(this.website,'_blank');
+            this.$router.push({name: 'project', params: {id: this.project.id}})
         }
     }
 }
