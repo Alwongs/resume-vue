@@ -2,6 +2,7 @@
 const projects = [
     { // id: 2; Organizer
         id: 2,
+        isReady: false,
         title: 'Органайзер',
         image: 'organizer',
         github: 'https://github.com/Alwongs/SPA-auth-Organizer',
@@ -29,6 +30,7 @@ const projects = [
 
     { // id: 3; Speak-art73
         id: 3,
+        isReady: false,
         title: 'Speak-Art73',
         image: 'speak-art73',
         github: 'https://github.com/Alwongs/speak-art73',
@@ -44,6 +46,7 @@ const projects = [
 
     { // id: 4; Like73
         id: 4,
+        isReady: false,
         title: 'Like73',
         image: 'like73',
         github: 'https://github.com/Alwongs/like',
@@ -63,6 +66,7 @@ const projects = [
 
     { // id:5; Links
         id: 5,
+        isReady: false,
         title: 'Links',
         image: 'links',
         github: 'https://github.com/Alwongs/links',
@@ -82,6 +86,7 @@ const projects = [
 
     { // id: 6; U-talent
         id: 6,
+        isReady: true,
         title: 'U-Talent',
         image: 'u-talent',
         github: 'https://github.com/Alwongs/u-talent',
@@ -105,6 +110,7 @@ const projects = [
 
     { // id: 7; Waybills
         id: 7,
+        isReady: false,
         title: 'Waybills',
         image: 'waybills',
         github: 'https://github.com/Alwongs/ways-auth',

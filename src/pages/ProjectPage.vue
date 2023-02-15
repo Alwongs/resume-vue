@@ -2,21 +2,24 @@
     <div class="project-page">
         <h2 class="project-page__title">{{ project.title }}</h2>
         <main class="project-page__main">
+
             <div class="project-page__image-block">
                 <img :src="require(`@/assets/images/preview/${getImage}.jpg`)" alt="image">
             </div>
+
             <div class="project-page__info-block">
+                <h3 class="project-page__info-title">Описание:</h3>
                 <p class="project-page__descripton">{{ project.description }}</p>
-                <p class="project-page__github">
-                    <a :href="project.github">github</a>
-                </p>
-                <p class="project-page__website">
-                    <a :href="project.website">website</a>
-                </p>
-                <ul>
-                    <li v-for="tech in project.stack" :key="tech.id">{{ tech.title }}</li>
+                <ul class="project-page__links">
+                    <li><a :href="project.github">репозиторий на github</a></li>
+                    <li><a :href="project.website">Перейти на сайт</a></li>                    
+                </ul>
+                <h3 class="project-page__info-title">Использовано:</h3>
+                <ul class="project-page__stack-list">
+                    <li v-for="tech in project.stack" :key="tech.id">{{ tech.title }},</li>
                 </ul>
             </div>
+
         </main>
     </div>
 </template>
@@ -71,15 +74,15 @@ $zian: rgb(31, 61, 116);
 
 .project-page {
     color: $zian;
-    padding: 32px 128px 0;
+    padding: 0 128px;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 32px 64px 0;
+        padding: 0 64px;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 32px 64px 0;
+        padding: 0 64px;
     }     
     @media (max-width: $mobile-max) {
-        padding: 16px;
+        padding: 0 16px;
     }  
 
     &__title {
@@ -88,16 +91,41 @@ $zian: rgb(31, 61, 116);
 }
 .project-page__main {
     display: flex;
+    @media (max-width: $mobile-max) {
+        flex-direction: column;
+    }      
 }
 .project-page__image-block {
     width: 500px;
-    margin-right: 32px;
+    margin-right: 64px;
+    @media (max-width: $mobile-max) {
+        margin-right: 0;
+        margin-bottom: 16px;
+        width: 100%;
+    }      
     img {
         width: 100%;
         border: 2px solid green;
     }
 }
 .project-page__info-block {
-
+    p {
+        margin-bottom: 16px;
+        padding-left: 16px;
+    }
+}
+.project-page__info-title {
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+.project-page__links {
+    margin-bottom: 16px;
+    padding-left: 32px;    
+    li {
+        margin-bottom: 4px;
+    }
+}
+.project-page__stack-list {
+    padding-left: 16px;
 }
 </style>

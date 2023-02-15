@@ -47,15 +47,15 @@ $zian: rgb(37, 69, 129);
 .header {
     background-color: $zian;
     color: $beige;
-    padding: 32px 128px;
+    padding: 24px 128px;
     display: flex;   
     justify-content: space-between;
     border-bottom: 1px solid rgb(75, 91, 112);
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 32px 64px;
+        padding: 24px 64px;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 32px 64px;
+        padding: 24px 64px;
     }      
     @media (max-width: $mobile-max) {
         border-bottom: none;        
@@ -82,9 +82,7 @@ $zian: rgb(37, 69, 129);
         border: 1px solid white;
     }
 }
-
 .header__info {
-
     h1 {
         font-size: 24px;
         font-weight: 400;

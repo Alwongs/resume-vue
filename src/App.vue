@@ -2,19 +2,28 @@
     <app-header />
     <info-section />
 
+    <bread-crumbs />
+
     <router-view></router-view>
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
 import InfoSection from '@/components/InfoSection.vue';
+import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
 export default {
     name: 'App',
     components: {
         AppHeader,
         InfoSection,
-    }
+        BreadCrumbs
+    },
+    // computed: {
+    //     currentRouteName() {
+    //         return this.$route.name;
+    //     }
+    // }
 }
 </script>
 

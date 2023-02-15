@@ -23,6 +23,7 @@
         </main>
         <footer class="portfolio-item__footer">
             <a :href="project.github">github</a>
+            <span v-if="project.isReady">&#9734;</span>
             <a :href="project.website">website</a>
         </footer>
     </li>  
@@ -142,6 +143,9 @@ $project-item-color: rgb(0, 120, 112);
             transition: 0.2s;
             letter-spacing: 0.8px;            
         }
+    }
+    span {
+        color: yellow;
     }
 }
 </style>
