@@ -17,10 +17,11 @@
         <div class="header__contacts">
             <h3>Контакты:</h3> 
             <ul>
-                <li>Тел: <a href="tel:+79370000000">+7(937)-000-00-00</a></li>
-                <li>email: <a href="mailto:mail@ya.ru">mail@ya.ru</a></li>
-                <li><a href="whatsapp://send?phone=79370000000&amp;text=">WhatsApp</a></li>
-                <li><a href="viber://chat?number=%2B79370000000">Viber</a></li>
+                <li class="header__phone">Тел: <a href="tel:+79370000000">+7(937)-000-00-00</a></li>
+                <li class="header__email">email: <a href="mailto:mail@ya.ru">mail@ya.ru</a></li>
+                <li class="header__whatsapp"><a href="whatsapp://send?phone=79370000000&amp;text=">WhatsApp</a></li>
+                <li class="header__telegram"><a href="viber://chat?number=%2B79370000000">Telegram</a></li>
+                <li class="header__viber"><a href="viber://chat?number=%2B79370000000">Viber</a></li>
             </ul> 
         </div>       
     </header>  
@@ -97,20 +98,37 @@ $zian: rgb(37, 69, 129);
             font-size: 16px;  
         }         
     }
-    h3 {
-        font-size: 20px;        
-        font-weight: 400;
-        margin-bottom: 16px;        
-    }
+    // h3 {
+    //     font-size: 20px;        
+    //     font-weight: 400;
+    //     margin-bottom: 16px;        
+    // }
     p {
+        position: relative;
         font-size: 16px;        
         font-weight: 400;
+        padding-left: 22px;
         @media (max-width: $mobile-max) {
             font-size: 16px;  
         }        
-    }    
+    }  
+    p::before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        background-image: url("../assets/images/icons/location.svg");        
+        background-size: 65%;
+        left: 0;
+        top: 3px;
+    }       
 }
 .header__contacts {
+    @media (max-width: $mobile-max) {
+        border-bottom: 1px solid grey;
+        padding-bottom: 8px;         
+    }     
     h3 {
         font-size: 18px;        
         font-weight: 400;  
@@ -121,16 +139,49 @@ $zian: rgb(37, 69, 129);
         padding: 0 32px;
     }
     li {
+        position: relative;
         font-size: 16px;
         font-style: italic;
         margin-bottom: 8px;         
     }
+    li::before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        background-size: 65%;
+        left: -22px;
+        top: 3px;
+    } 
+
     a {
         color: white;   
     }
-    @media (max-width: $mobile-max) {
-        border-bottom: 1px solid grey;
-        padding-bottom: 8px;         
-    }     
+}
+.header__whatsapp {
+    &::before {
+        background-image: url("../assets/images/icons/whatsapp.svg");
+    }
+}
+.header__telegram {
+    &::before {
+        background-image: url("../assets/images/icons/telegram.svg");
+    }
+}
+.header__viber {
+    &::before {
+        background-image: url("../assets/images/icons/viber.svg");
+    }
+}
+.header__phone {
+    &::before {
+        background-image: url("../assets/images/icons/phone.svg");
+    }
+}
+.header__email {
+    &::before {
+        background-image: url("../assets/images/icons/email.svg");
+    }
 }
 </style>

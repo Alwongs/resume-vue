@@ -30,22 +30,26 @@ $zian: rgb(37, 69, 129);
 .info__skill-list {
     background-color: $zian;
     border-bottom: 1px solid green;
-    padding: 6px 128px;
+    padding: 6px 128px 0;
     display: flex;
     flex-wrap: wrap;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 6px 64px;
+        padding: 6px 64px 0;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 6px 64px;
+        padding: 6px 64px 0;
     }     
     @media (max-width: $mobile-max) {
-        padding: 6px 16px;      
+        padding: 6px 16px 0;      
     }    
 }
 .info__skill-list li {
-    margin-right: 32px;
-    color: yellow;
-    font-size: 17px;
+    margin-right: 24px;
+    color: $zian;
+    font-size: 14px;
+    padding: 2px 6px;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    background-color: #dcdcdc;
 }
 </style>

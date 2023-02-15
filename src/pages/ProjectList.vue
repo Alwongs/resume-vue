@@ -1,6 +1,5 @@
 <template>
     <section class="project-list-page">
-        <h2 style="color:red;" class="project-list-page__title">1. Скачать и установить иконки на контакты...</h2>
         <h2 class="project-list-page__title">Приложения</h2>
         <ul class="project-list-page__list">
             <project-item 

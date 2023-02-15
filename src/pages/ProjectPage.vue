@@ -96,8 +96,16 @@ $zian: rgb(31, 61, 116);
     }      
 }
 .project-page__image-block {
-    width: 500px;
-    margin-right: 64px;
+    width: 600px;
+    margin-right: 128px;
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+        width: 500px;
+        margin-right: 64px;        
+    }     
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        width: 500px;
+        margin-right: 64px;        
+    }     
     @media (max-width: $mobile-max) {
         margin-right: 0;
         margin-bottom: 16px;

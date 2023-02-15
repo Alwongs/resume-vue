@@ -134,6 +134,8 @@ $project-item-color: rgb(0, 120, 112);
     padding: 0 16px;
     color: white;
     a {
+        position: relative;
+        padding-left: 14px;
         font-size: 13px;
         color: $beige;
         letter-spacing: 0.7px;
@@ -147,5 +149,17 @@ $project-item-color: rgb(0, 120, 112);
     span {
         color: yellow;
     }
+    a:first-child::before {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-image: url("../assets/images/icons/github.svg");        
+        width: 16px;
+        height: 16px;
+        background-size: 100%;
+        left: -4px;
+        top: 7px;        
+    }
 }
+
 </style>
