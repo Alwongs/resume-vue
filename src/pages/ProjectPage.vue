@@ -93,6 +93,7 @@ $zian: rgb(31, 61, 116);
     display: flex;
     @media (max-width: $mobile-max) {
         flex-direction: column;
+        margin-bottom: 16px;
     }      
 }
 .project-page__image-block {

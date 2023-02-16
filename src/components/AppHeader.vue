@@ -98,11 +98,6 @@ $zian: rgb(37, 69, 129);
             font-size: 16px;  
         }         
     }
-    // h3 {
-    //     font-size: 20px;        
-    //     font-weight: 400;
-    //     margin-bottom: 16px;        
-    // }
     p {
         position: relative;
         font-size: 16px;        
