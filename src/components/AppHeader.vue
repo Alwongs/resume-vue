@@ -60,8 +60,7 @@ export default {
 .header__image {   
     height: 160px;
     margin-right: 24px;
-    @media (max-width: $mobile-max) {
-        margin-right: 12px;        
+    @media (max-width: $mobile-max) {       
         margin-bottom: 16px;
     } 
     img {

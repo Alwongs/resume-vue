@@ -8,6 +8,7 @@ const projects = [
         github: 'https://github.com/Alwongs/SPA-auth-Organizer',
         website: 'http://o937876j.beget.tech',
         description: 'Органайзер содержит несколько приложений для тайм-менеджмента',
+        comments: 'Планируется переделать полностью',
         stack: [
             {
                 id: 1,
@@ -36,6 +37,7 @@ const projects = [
         github: 'https://github.com/Alwongs/speak-art73',
         website: 'https://alwongs.github.io/speak-art73/',
         description: 'Школа Английского и Китайского языков',
+        comments: '',
         stack: [
             {
                 id: 1,
@@ -52,6 +54,7 @@ const projects = [
         github: 'https://github.com/Alwongs/like',
         website: 'https://alwongs.github.io/like/',
         description: 'Клуб активного отдыха',
+        comments: 'планируется перевести на Laravel',
         stack: [
             {
                 id: 1,
@@ -72,6 +75,7 @@ const projects = [
         github: 'https://github.com/Alwongs/links',
         website: 'https://alwongs.github.io/links/',
         description: 'Архив полезных ссылок по категориям',
+        comments: 'Планируется перенести в Органайзер',
         stack: [
             {
                 id: 1,
@@ -92,6 +96,7 @@ const projects = [
         github: 'https://github.com/Alwongs/u-talent',
         website: 'https://alwongs.github.io/u-talent/',
         description: 'Конкурс читателей на английском языке',
+        comments: 'Сайт завершен полностью',
         stack: [
             {
                 id: 1,
@@ -116,6 +121,7 @@ const projects = [
         github: 'https://github.com/Alwongs/ways-auth',
         website: 'http://alwong.h1n.ru/',
         description: 'Подготовка путевых листов автомобилей',
+        comments: 'Ждет решения о продолжении разработки',
         stack: [
             {
                 id: 1,

@@ -10,16 +10,20 @@
             <div class="project-page__info-block">
                 <h3 class="project-page__info-title">Описание:</h3>
                 <p class="project-page__descripton">{{ project.description }}</p>
+
                 <ul class="project-page__links">
                     <li><a :href="project.github">репозиторий на github</a></li>
                     <li><a :href="project.website">Перейти на сайт</a></li>                    
                 </ul>
+
                 <h3 class="project-page__info-title">Использовано:</h3>
                 <ul class="project-page__stack-list">
                     <li v-for="tech in project.stack" :key="tech.id">{{ tech.title }},</li>
                 </ul>
-            </div>
 
+                <h3 class="project-page__info-title">Комментарии:</h3>
+                <p class="project-page__comments">{{ project.comments }}</p>                
+            </div>
         </main>
     </div>
 </template>
@@ -117,5 +121,10 @@ export default {
 }
 .project-page__stack-list {
     padding-left: 16px;
+    margin-bottom: 16px;    
+}
+.project-page__comments {
+    font-style: italic;
+    color: rgb(156, 175, 188);
 }
 </style>

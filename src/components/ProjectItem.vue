@@ -131,16 +131,21 @@ export default {
     span {
         color: yellow;
     }
-    a:first-child::before {
-        content: '';
+    a:before {
+        content: '';        
         position: absolute;
         background-repeat: no-repeat;
-        background-image: url("../assets/images/icons/github.svg");        
         width: 16px;
         height: 16px;
         background-size: 100%;
         left: -4px;
-        top: 7px;        
+        top: 7px;   
+    }
+    a:first-child::before {
+        background-image: url("../assets/images/icons/github.svg");        
+    }
+    a:last-child::before {
+        background-image: url("../assets/images/icons/website.svg");               
     }
 }
 

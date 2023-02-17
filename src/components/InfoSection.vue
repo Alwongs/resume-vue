@@ -31,16 +31,20 @@ export default {
         padding: 6px 64px 0;
     }     
     @media (max-width: $mobile-max) {
-        padding: 6px 16px 0;      
+        padding: 8px 16px 0;      
     }    
 }
 .info__skill-list li {
     margin-right: 24px;
-    color: $zian;
+    color: rgb(0, 105, 0);
+    font-weight: 500;
     font-size: 14px;
     padding: 2px 6px;
     margin-bottom: 6px;
     border-radius: 3px;
-    background-color: #dcdcdc;
+    background-color: $beige;
+    @media (max-width: $mobile-max) {
+        margin-bottom: 8px;    
+    }      
 }
 </style>
