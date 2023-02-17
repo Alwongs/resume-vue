@@ -52,25 +52,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* ---- screen sizes ---- */
-$desktop-max: 1439px;
-$desktop-min: 1024px;
-$tablet-max: 1023px;
-$tablet-min: 768px;
-$mobile-max: 767px;
-
-$beige: #fffae4;
-$zian: rgb(31, 61, 116);
-
-@mixin title {
-    font-weight: 500;
-    margin-bottom: 32px;
-    text-align: center;
-    @media (max-width: $mobile-max) {
-        margin-bottom: 16px;
-        font-size: 120%;
-    }    
-}
 
 .project-page {
     color: $zian;
@@ -91,10 +72,10 @@ $zian: rgb(31, 61, 116);
 }
 .project-page__main {
     display: flex;
+    margin-bottom: 32px;
     @media (max-width: $mobile-max) {
         flex-direction: column;
-        margin-bottom: 16px;
-    }      
+    }
 }
 .project-page__image-block {
     width: 600px;

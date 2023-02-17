@@ -18,15 +18,6 @@ export default {
 
 <style lang="scss" scoped>
 
-/* ---- screen sizes ---- */
-$desktop-max: 1439px;
-$desktop-min: 1024px;
-$tablet-max: 1023px;
-$tablet-min: 768px;
-$mobile-max: 767px;
-
-$zian: rgb(37, 69, 129);
-
 .info__skill-list {
     background-color: $zian;
     border-bottom: 1px solid green;

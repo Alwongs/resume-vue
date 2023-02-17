@@ -42,25 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* ---- screen sizes ---- */
 
-// SCSS
-@function darker($color, $tone) {
-  $adjust: -16*$tone;
-  @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
-}
-
-$desktop-max: 1439px;
-$desktop-min: 1024px;
-$tablet-max: 1023px;
-$tablet-min: 768px;
-$mobile-max: 767px;
-
-$beige: #fffae4;
-$project-item-color: rgb(0, 120, 112);
-
-
-//-------------------------
 .portfolio-item {
     width: 300px;
     height: 200px;

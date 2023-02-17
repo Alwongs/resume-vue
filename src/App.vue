@@ -2,14 +2,15 @@
     <app-header />
     <info-section />
     <bread-crumbs />
-    <div>
+    <div class="page-view">
         <router-view></router-view>
     </div>
-    <footer>© Мартынов А. В., 2022 </footer>
+    <app-footer />
 </template>
 
 <script>
 import AppHeader from '@/components/AppHeader.vue';
+import AppFooter from '@/components/AppFooter.vue';
 import InfoSection from '@/components/InfoSection.vue';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
@@ -18,11 +19,26 @@ export default {
     components: {
         AppHeader,
         InfoSection,
-        BreadCrumbs
+        BreadCrumbs,
+        AppFooter
     }
 }
 </script>
 
-<style>
+<style lang="scss">
 
+html, body {
+    background-color: $beige;
+    height: 100vh;
+    font-size: 20px;
+    color: rgb(52, 54, 61);
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.page-view {
+    flex-grow: 1;
+}
 </style>

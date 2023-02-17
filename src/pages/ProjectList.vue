@@ -5,14 +5,6 @@
             <project-item 
                 v-for="project in projects" 
                 :key="project.id" 
-                :id="project.id" 
-                :title="project.title" 
-                :image="project.image" 
-                :github="project.github" 
-                :website="project.website" 
-                :description="project.description" 
-                :stack="project.stack"
-
                 :project="project"
                 class="project-list-page__item"
             />
@@ -36,25 +28,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* ---- screen sizes ---- */
-$desktop-max: 1439px;
-$desktop-min: 1024px;
-$tablet-max: 1023px;
-$tablet-min: 768px;
-$mobile-max: 767px;
-
-$beige: #fffae4;
-$zian: rgb(31, 61, 116);
-
-@mixin title {
-    font-weight: 500;
-    margin-bottom: 32px;
-    text-align: center;
-    @media (max-width: $mobile-max) {
-        margin-bottom: 16px;
-        font-size: 120%;
-    }    
-}
 
 .project-list-page {
     color: $zian;

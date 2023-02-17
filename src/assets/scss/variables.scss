@@ -8,3 +8,19 @@ $mobile-max: 767px;
 
 $beige: #fffae4;
 $zian: rgb(37, 69, 129);
+$project-item-color: rgb(0, 120, 112);
+
+@mixin title {
+    font-weight: 500;
+    margin-bottom: 32px;
+    text-align: center;
+    @media (max-width: $mobile-max) {
+        margin-bottom: 16px;
+        font-size: 120%;
+    }    
+}
+
+@function darker($color, $tone) {
+    $adjust: -16*$tone;
+    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}

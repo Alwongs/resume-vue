@@ -31,15 +31,6 @@ export default {
 
 <style lang="scss" scoped>
 
-/* ---- screen sizes ---- */
-$desktop-max: 1439px;
-$desktop-min: 1024px;
-$tablet-max: 1023px;
-$tablet-min: 768px;
-$mobile-max: 767px;
-
-$zian: rgb(37, 69, 129);
-
 .breadcrumbs-component {
     padding: 4px 128px 0;
     display: flex;
@@ -51,7 +42,8 @@ $zian: rgb(37, 69, 129);
         padding: 6px 64px 0;
     }     
     @media (max-width: $mobile-max) {
-        padding: 6px 16px 0;      
+        padding: 6px 16px 0;   
+        margin-bottom: 8px;   
     }    
 }
 .breadcrumbs-component li {
