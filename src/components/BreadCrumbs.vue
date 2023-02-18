@@ -19,7 +19,7 @@ export default {
             if (this.$route.name === 'project') {
                 return {
                     home: 'ГЛАВНАЯ',
-                    app: 'ПРИЛОЖЕНИЕ'
+                    app: 'ПРОСМОТР ПРИЛОЖЕНИЯ'
                 }
             } else {
                 return null

@@ -3,8 +3,22 @@
         <h2 class="project-page__title">{{ project.title }}</h2>
         <main class="project-page__main">
 
-            <div class="project-page__image-block">
-                <img :src="require(`@/assets/images/preview/${getImage}.jpg`)" alt="image">
+            <div 
+                class="project-page__image-block" 
+                :class="{'image-is-bigger': isImageBigger}"                
+            >
+                <div 
+                    v-if="isImageBigger" 
+                    class="cross-btn-white" 
+                    @click="isImageBigger = !isImageBigger"
+                >
+                    &#10006;
+                </div>
+                <img 
+                    :src="require(`@/assets/images/preview/${getImage}.jpg`)" 
+                    alt="image"
+                    @click="isImageBigger = !isImageBigger"
+                >
             </div>
 
             <div class="project-page__info-block">
@@ -12,8 +26,8 @@
                 <p class="project-page__descripton">{{ project.description }}</p>
 
                 <ul class="project-page__links">
-                    <li><a :href="project.github">репозиторий на github</a></li>
-                    <li><a :href="project.website">Перейти на сайт</a></li>                    
+                    <li class="project-page__link-github"><a :href="project.github">Репозиторий на github</a></li>
+                    <li class="project-page__link-website"><a :href="project.website">Перейти на сайт</a></li>                    
                 </ul>
 
                 <h3 class="project-page__info-title">Использовано:</h3>
@@ -40,6 +54,7 @@ export default {
     },
     data() {
         return {
+            isImageBigger: false,
             id: null,
             projects: projects,
             project: {},
@@ -84,6 +99,23 @@ export default {
 .project-page__image-block {
     width: 600px;
     margin-right: 128px;
+    &.image-is-bigger {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;;
+        background-color: #1d282eed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        img {
+            max-width: 900px;
+            box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);            
+        }
+    }
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         width: 500px;
         margin-right: 64px;        
@@ -99,13 +131,24 @@ export default {
     }      
     img {
         width: 100%;
-        border: 2px solid green;
+        border: 1px solid $zian;
+        cursor: pointer;
+    }
+    .cross-btn-white {
+        color: white;     
+        position: absolute;
+        font-size: 32px;
+        line-height: 32px;
+        right: 16px;
+        top: 16px;   
+        cursor: pointer;     
     }
 }
 .project-page__info-block {
-    p {
+    .project-page__descripton {
         margin-bottom: 16px;
         padding-left: 16px;
+        font-style: italic;
     }
 }
 .project-page__info-title {
@@ -114,14 +157,47 @@ export default {
 }
 .project-page__links {
     margin-bottom: 16px;
-    padding-left: 32px;    
+    padding-left: 38px;    
     li {
+        position: relative;
         margin-bottom: 4px;
     }
+    li::before {
+        content: '';        
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        left: -25px;
+        top: 3px;   
+    }
 }
+.project-page__link-github::before {
+    background-image: url("../assets/images/icons/github.svg"); 
+}
+.project-page__link-website::before {
+    background-image: url("../assets/images/icons/website.svg"); 
+}
+
 .project-page__stack-list {
-    padding-left: 16px;
-    margin-bottom: 16px;    
+    padding-left: 38px;
+    margin-bottom: 16px;   
+    li {
+        position: relative;
+        margin-bottom: 4px;
+    }
+    li::before {
+        content: '\2714';        
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        background-size: 100%;
+        left: -23px;
+        top: -3px;  
+        color: green;            
+    } 
 }
 .project-page__comments {
     font-style: italic;

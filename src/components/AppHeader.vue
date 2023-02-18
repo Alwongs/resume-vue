@@ -66,6 +66,7 @@ export default {
     img {
         height: 100%;
         border: 1px solid white;
+        // box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);        
     }
 }
 .header__info {

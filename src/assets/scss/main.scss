@@ -15,8 +15,11 @@ $project-item-color: rgb(0, 120, 112);
 
 @mixin title {
     font-weight: 500;
-    margin-bottom: 32px;
-    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 4px;
+    margin-bottom: 32px; 
+    // border-bottom: 4px solid lighter($zian, 1);   
     @media (max-width: $mobile-max) {
         margin-bottom: 16px;
         font-size: 120%;
@@ -25,5 +28,10 @@ $project-item-color: rgb(0, 120, 112);
 
 @function darker($color, $tone) {
     $adjust: -16*$tone;
+    @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+
+@function lighter($color, $tone) {
+    $adjust: +16*$tone;
     @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
 }
