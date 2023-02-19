@@ -85,7 +85,7 @@ export default {
     overflow: hidden;
     cursor: pointer;
     &:hover {
-        background-color: rgba(255, 255, 255, 0.94);
+        background-color: rgba($beige, 0.9);
         color: darker($project-item-color, 4);
     }      
 }
@@ -119,6 +119,7 @@ export default {
         position: relative;
         padding-left: 14px;
         font-size: 13px;
+        font-weight: 300;
         color: $beige;
         letter-spacing: 0.7px;
         text-decoration: none;

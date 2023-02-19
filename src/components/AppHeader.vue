@@ -13,7 +13,7 @@
                 <p>г.Ульяновск</p>
             </div>
         </div>
-
+        <p style="color:yellow;">Кнопку назад на странице приложения</p>
         <contact-list class="header__right"/>
     </header>  
 </template>
@@ -104,8 +104,5 @@ export default {
         left: 0;
         top: 3px;
     }       
-}
-.header__right {
-    
 }
 </style>

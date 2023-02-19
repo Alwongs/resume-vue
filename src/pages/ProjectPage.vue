@@ -101,7 +101,7 @@ export default {
     margin-right: 128px;
     &.image-is-bigger {
         z-index: 2;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
@@ -112,7 +112,7 @@ export default {
         align-items: center;
         padding: 16px;
         img {
-            max-width: 900px;
+            max-width: 800px;
             box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);            
         }
     }
@@ -133,6 +133,9 @@ export default {
         width: 100%;
         border: 1px solid $zian;
         cursor: pointer;
+        &:hover {
+            box-shadow: 0px 0px 5px 1px rgba(0, 119, 255, 0.4);              
+        }
     }
     .cross-btn-white {
         color: white;     
