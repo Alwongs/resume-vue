@@ -60,6 +60,13 @@ export default {
             project: {},
         }
     },
+    updated() {
+        this.id = Number(this.$route.params.id);
+
+        this.project = this.projects.find(proj => {
+            return proj.id == this.id;
+        })        
+    },
     created() {
         this.id = Number(this.$route.params.id);
 
