@@ -3,21 +3,10 @@
         <h2 class="project-page__title">{{ project.title }}</h2>
         <main class="project-page__main">
 
-            <div 
-                class="project-page__image-block" 
-                :class="{'image-is-bigger': isImageBigger}"                
-            >
-                <div 
-                    v-if="isImageBigger" 
-                    class="cross-btn-white" 
-                    @click="isImageBigger = !isImageBigger"
-                >
-                    &#10006;
-                </div>
+            <div class="project-page__image-block">
                 <img 
                     :src="require(`@/assets/images/preview/${getImage}.jpg`)" 
-                    alt="image"
-                    @click="isImageBigger = !isImageBigger"
+                    :alt="getImage"
                 >
             </div>
 
@@ -36,7 +25,11 @@
                 </ul>
 
                 <h3 class="project-page__info-title">Комментарии:</h3>
-                <p class="project-page__comments">{{ project.comments }}</p>                
+                <p class="project-page__comments">{{ project.comments }}</p>    
+
+                <router-link :to="{name: 'home'}">
+                    <p class="icon-back"></p>
+                </router-link>            
             </div>
         </main>
     </div>
@@ -54,7 +47,6 @@ export default {
     },
     data() {
         return {
-            isImageBigger: false,
             id: null,
             projects: projects,
             project: {},
@@ -63,8 +55,8 @@ export default {
     created() {
         this.id = Number(this.$route.params.id);
 
-        this.project = this.projects.find(proj => {
-            return proj.id == this.id;
+        this.project = this.projects.find(el => {
+            return el.id == this.id;
         })
     }
 }
@@ -99,23 +91,6 @@ export default {
 .project-page__image-block {
     width: 600px;
     margin-right: 128px;
-    &.image-is-bigger {
-        z-index: 2;
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;;
-        background-color: #1d282eed;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 16px;
-        img {
-            max-width: 800px;
-            box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.7);            
-        }
-    }
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         width: 500px;
         margin-right: 64px;        
@@ -132,19 +107,6 @@ export default {
     img {
         width: 100%;
         border: 1px solid $zian;
-        cursor: pointer;
-        &:hover {
-            box-shadow: 0px 0px 5px 1px rgba(0, 119, 255, 0.4);              
-        }
-    }
-    .cross-btn-white {
-        color: white;     
-        position: absolute;
-        font-size: 32px;
-        line-height: 32px;
-        right: 16px;
-        top: 16px;   
-        cursor: pointer;     
     }
 }
 .project-page__info-block {
@@ -204,6 +166,15 @@ export default {
 }
 .project-page__comments {
     font-style: italic;
-    color: rgb(156, 175, 188);
+    padding-left: 16px;
+    margin-bottom: 32px;
+    color: rgba($zian, 0.4);
+}
+.icon-back {
+    background-image: url("../assets/images/icons/back.svg");   
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 48px;  
+    margin: 0 auto;    
 }
 </style>

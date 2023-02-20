@@ -19,7 +19,7 @@ $project-item-color: rgb(0, 120, 112);
     margin: 0 auto;
     padding-bottom: 4px;
     margin-bottom: 32px; 
-    // border-bottom: 4px solid lighter($zian, 1);   
+    color: lighter($zian, 1);   
     @media (max-width: $mobile-max) {
         margin-bottom: 16px;
         font-size: 120%;
