@@ -6,8 +6,8 @@
         <main class="project-page__main">
             <div class="project-page__image-block">
                 <img 
-                    :src="getImage" 
-                    :alt="getImage"
+                    :src="require(`@/assets/images/preview/${project.image}.jpg`)" 
+                    :alt="project.image"
                 >
             </div>
 
@@ -64,21 +64,19 @@ import projects from '../data.js';
 
 export default {
     name: 'ProjectPage',
-    computed: {
-        getImage() {
-            if (this.project) {
-                return require(`@/assets/images/preview/${this.project.image}.jpg`);
-            } else {
-                return require(`@/assets/images/gif/404.gif`);
-            }
-
-        }
-    },
     data() {
         return {
             id: null,
             projects: projects,
-            project: {},
+            project: {
+                title: '',
+                description: '',
+                github: '',
+                website: '',
+                stack: [],
+                comments: '',
+                image: 'no-image'
+            },
         }
     },
     created() {
@@ -87,12 +85,9 @@ export default {
         let result = this.projects.find(el => {
             return el.id == this.id;
         })
-
-        if (!result) {
-            this.goToUrl('/404');
-        } else {
+        if(result)  {
             this.project = result;
-        }
+        } else this.$router.push({name: '404'});
     }
 }
 </script>
