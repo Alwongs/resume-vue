@@ -6,7 +6,7 @@
         <main class="project-page__main">
             <div class="project-page__image-block">
                 <img 
-                    :src="require(`@/assets/images/preview/${getImage}.jpg`)" 
+                    :src="getImage" 
                     :alt="getImage"
                 >
             </div>
@@ -66,7 +66,12 @@ export default {
     name: 'ProjectPage',
     computed: {
         getImage() {
-            return this.project.image;
+            if (this.project) {
+                return require(`@/assets/images/preview/${this.project.image}.jpg`);
+            } else {
+                return require(`@/assets/images/gif/404.gif`);
+            }
+
         }
     },
     data() {
@@ -79,9 +84,15 @@ export default {
     created() {
         this.id = Number(this.$route.params.id);
 
-        this.project = this.projects.find(el => {
+        let result = this.projects.find(el => {
             return el.id == this.id;
         })
+
+        if (!result) {
+            this.goToUrl('/404');
+        } else {
+            this.project = result;
+        }
     }
 }
 </script>
