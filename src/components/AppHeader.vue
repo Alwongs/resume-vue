@@ -13,7 +13,6 @@
                 <p>г.Ульяновск</p>
             </div>
         </div>
-        <!-- <p style="color:yellow;">Кнопку назад на странице приложения</p> -->
         <contact-list class="header__right"/>
     </header>  
 </template>
@@ -65,8 +64,7 @@ export default {
     } 
     img {
         height: 100%;
-        border: 1px solid white;
-        // box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);        
+        border: 1px solid white;       
     }
 }
 .header__info {
@@ -79,10 +77,19 @@ export default {
     h2 {
         font-size: 20px;        
         font-weight: 400;
+        color: yellow;
         margin-bottom: 16px;
         @media (max-width: $mobile-max) {
             font-size: 16px;  
         }         
+    }
+    small {
+        font-weight: 300;
+        font-size: 14px;
+        color: white;   
+        @media (max-width: $mobile-max) {
+            font-size: 12px;  
+        }               
     }
     p {
         position: relative;

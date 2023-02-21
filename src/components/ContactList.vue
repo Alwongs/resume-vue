@@ -2,20 +2,49 @@
     <div class="contact-list">
         <h3>Контакты:</h3> 
         <ul>
-            <li class="contact-list__phone" @click="goTo('tel:+79378773757')">
-                <a href="tel:+79378773757">+7(937)-000-00-00</a>
+            <li 
+                class="contact-list__phone" 
+                @click="goToUrl('tel:+79378773757')"
+            >
+                <a href="tel:+79378773757">
+                    +7(937)-877-37-57
+                </a>
             </li>
-            <li class="contact-list__email" @click="goTo('mailto:alwong@ya.ru')">
-                <a href="mailto:alwong@ya.ru">alwong@ya.ru</a>
+
+            <li 
+                class="contact-list__email" 
+                @click="goToUrl('mailto:alwong@ya.ru')"
+            >
+                <a href="mailto:alwong@ya.ru">
+                    alwong@ya.ru
+                </a>
             </li>
-            <li class="contact-list__whatsapp" @click="goTo('whatsapp://send?phone=79378773757&amp;text=')">
-                <a href="whatsapp://send?phone=79378773757&amp;text=">WhatsApp</a>
+
+            <li 
+                class="contact-list__whatsapp" 
+                @click="goToUrl('whatsapp://send?phone=79378773757&amp;text=')"
+            >
+                <a href="whatsapp://send?phone=79378773757&amp;text=">
+                    WhatsApp
+                </a>
             </li>
-            <li class="contact-list__telegram" @click="goTo('https://t.me/Alwongs')">
-                <a href="https://t.me/Alwongs">Telegram</a>
+
+            <li 
+                class="contact-list__telegram" 
+                @click="goToUrl('https://t.me/Alwongs')"
+            >
+                <a href="https://t.me/Alwongs">
+                    Telegram
+                </a>
             </li>
-            <li class="contact-list__viber" @click="goTo('viber://chat?number=%2B79378773757')">
-                <a href="viber://chat?number=%2B79378773757">Viber</a>
+
+            <li 
+                class="contact-list__viber" 
+                @click="goToUrl('viber://chat?number=%2B79378773757')"
+            >
+                <a href="viber://chat?number=%2B79378773757">
+                    Viber
+                </a>
             </li>
         </ul> 
     </div> 
@@ -23,12 +52,7 @@
 
 <script>
 export default {
-    name: 'ContactList',
-    methods: {
-        goTo(url) {
-            window.location.href = url
-        }
-    }
+    name: 'ContactList'
 }
 </script>
 
@@ -39,7 +63,6 @@ export default {
         border-bottom: 1px solid grey;
         padding-bottom: 8px;
         ul {
-            // border: 1px solid red;
             height: 54px;
             margin-bottom: 8px;
             display: flex;
@@ -51,9 +74,6 @@ export default {
             color: transparent;
         }   
         ul li::before {
-            // content: '';
-            // position: absolute;
-            // background-repeat: no-repeat;
             width: 44px;
             height: 44px;
             background-size: 100%;

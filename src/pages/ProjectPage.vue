@@ -1,8 +1,9 @@
 <template>
     <div class="project-page">
-        <h2 class="project-page__title">{{ project.title }}</h2>
+        <h2 class="project-page__title">
+            {{ project.title }}
+        </h2>
         <main class="project-page__main">
-
             <div class="project-page__image-block">
                 <img 
                     :src="require(`@/assets/images/preview/${getImage}.jpg`)" 
@@ -11,21 +12,44 @@
             </div>
 
             <div class="project-page__info-block">
-                <h3 class="project-page__info-title">Описание:</h3>
-                <p class="project-page__descripton">{{ project.description }}</p>
+                <h3 class="project-page__info-title">
+                    Описание:
+                </h3>
+                <p class="project-page__descripton">
+                    {{ project.description }}
+                </p>
 
                 <ul class="project-page__links">
-                    <li class="project-page__link-github"><a :href="project.github">Репозиторий на github</a></li>
-                    <li class="project-page__link-website"><a :href="project.website">Перейти на сайт</a></li>                    
+                    <li class="project-page__link-github">
+                        <a :href="project.github">
+                            Репозиторий на github
+                        </a>
+                    </li>
+                    <li class="project-page__link-website">
+                        <a :href="project.website">
+                            Перейти на сайт
+                        </a>
+                    </li>                    
                 </ul>
 
-                <h3 class="project-page__info-title">Использовано:</h3>
+                <h3 class="project-page__info-title">
+                    Использовано:
+                </h3>
                 <ul class="project-page__stack-list">
-                    <li v-for="tech in project.stack" :key="tech.id">{{ tech.title }},</li>
+                    <li 
+                        v-for="tech in project.stack" 
+                        :key="tech.id"
+                    >
+                        {{ tech.title }},
+                    </li>
                 </ul>
 
-                <h3 class="project-page__info-title">Комментарии:</h3>
-                <p class="project-page__comments">{{ project.comments }}</p>    
+                <h3 class="project-page__info-title">
+                    Комментарии:
+                </h3>
+                <p class="project-page__comments">
+                    {{ project.comments }}
+                </p>    
 
                 <router-link :to="{name: 'home'}">
                     <p class="icon-back"></p>
