@@ -1,11 +1,11 @@
 <template>
     <ul class="info__skill-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Vue.js</li>
-        <li>PHP</li>
-        <li>Laravel</li>
+        <li>HTML</li> 
+        <li>CSS</li> 
+        <li>JavaScript</li> 
+        <li>Vue.js</li> 
+        <li>PHP</li> 
+        <li>Laravel</li> 
         <li>git</li>
     </ul>
 </template>
@@ -35,16 +35,32 @@ export default {
     }    
 }
 .info__skill-list li {
+    position: relative;
     margin-right: 24px;
-    color: rgb(0, 105, 0);
+    color: yellow;
     font-weight: 500;
     font-size: 14px;
     padding: 2px 6px;
     margin-bottom: 6px;
     border-radius: 3px;
-    background-color: $beige;
     @media (max-width: $mobile-max) {
         margin-bottom: 8px;    
-    }      
+    }     
+    &:before {
+        content: '\00B7';  
+        font-size: 20px;       
+        position: absolute;
+        background-repeat: no-repeat;
+        left: -3px;
+        top: -2px;   
+    }     
+    &:after {
+        content: '\00B7';  
+        font-size: 20px;      
+        position: absolute;
+        background-repeat: no-repeat;
+        right: -3px;
+        top: -2px;   
+    }     
 }
 </style>
