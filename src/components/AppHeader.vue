@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+    <header v-if="isOpenHeader" class="header">
         <div class="header__left">
             <div class="header__image">
                 <router-link :to="{name: 'home'}">
@@ -14,7 +14,15 @@
             </div>
         </div>
         <contact-list class="header__right"/>
-    </header>  
+    </header> 
+    <div 
+        v-if="!isOpenHeader" 
+        class="header-tab"
+        @click="isPermittedHeader = !isPermittedHeader"
+    >
+        <span v-if="!isOpenHeader">Открыть резюме</span>
+        <span v-else>Скрыть</span>
+    </div> 
 </template>
 
 <script>
@@ -24,6 +32,20 @@ export default {
     name: 'AppHeader',
     components: {
         ContactList
+    },
+    computed: {
+        isOpenHeader() {
+            if(this.$route.name == 'home' || this.isPermittedHeader) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    },
+    data() {
+        return {
+            isPermittedHeader: false
+        }
     }
 }
 </script>
@@ -47,7 +69,25 @@ export default {
         border-bottom: none;        
         padding: 16px 16px 0;
         flex-direction: column;        
+    }  
+
+}
+.header-tab {
+    background-color: $zian;
+    color: $beige;  
+    padding: 0px 128px; 
+    font-size: 12px;      
+    border-bottom: 1px solid rgb(75, 91, 112);
+    cursor: pointer;
+    @media (min-width: $desktop-min) and (max-width: $desktop-max) {
+        padding: 0px 64px;
     }     
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        padding: 0px 64px;
+    }      
+    @media (max-width: $mobile-max) {   
+        padding: 0px 16px;      
+    }        
 }
 .header__left {
     display: flex; 
