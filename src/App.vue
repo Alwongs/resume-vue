@@ -1,6 +1,6 @@
 <template>
     <app-header />
-    <info-section />
+
     <bread-crumbs />
     <div class="page-view">
         <router-view></router-view>
@@ -11,14 +11,12 @@
 <script>
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
-import InfoSection from '@/components/InfoSection.vue';
 import BreadCrumbs from '@/components/BreadCrumbs.vue';
 
 export default {
     name: 'App',
     components: {
         AppHeader,
-        InfoSection,
         BreadCrumbs,
         AppFooter
     }

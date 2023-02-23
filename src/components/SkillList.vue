@@ -31,14 +31,16 @@ export default {
         padding: 6px 64px 0;
     }     
     @media (max-width: $mobile-max) {
-        padding: 8px 16px 0;      
+        padding: 8px 16px 0;  
+        flex-direction: column;  
+        align-items: center;  
     }    
 }
 .info__skill-list li {
     position: relative;
-    margin-right: 24px;
+    margin-right: 20px;
     color: yellow;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     padding: 2px 6px;
     margin-bottom: 6px;
@@ -51,7 +53,7 @@ export default {
         font-size: 20px;       
         position: absolute;
         background-repeat: no-repeat;
-        left: -3px;
+        left: -2px;
         top: -2px;   
     }     
     &:after {
@@ -59,7 +61,7 @@ export default {
         font-size: 20px;      
         position: absolute;
         background-repeat: no-repeat;
-        right: -3px;
+        right: -2px;
         top: -2px;   
     }     
 }

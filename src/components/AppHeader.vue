@@ -1,58 +1,85 @@
 <template>
-    <header v-if="isOpenHeader" class="header">
-        <div class="header__left">
-            <div class="header__image">
-                <router-link :to="{name: 'home'}">
-                    <img src="@/assets/images/me.jpg" alt="photo">
-                </router-link>
-            </div> 
+    <header :class="{'hidden-header': !isOpenHeader && !isHomePage}">
+        <div class="person-info">
+            <div class="person-info__left">
+                <div class="person-info__image">
+                    <router-link :to="{name: 'home'}">
+                        <img src="@/assets/images/me.jpg" alt="photo">
+                    </router-link>
+                </div> 
 
-            <div class="header__info">         
-                <h1>Мартынов<br>Александр</h1>
-                <h2>web-разработчик<br><small>(без опыта)</small></h2>
-                <p>г.Ульяновск</p>
+                <div class="person-info__info">         
+                    <h1>Мартынов<br>Александр</h1>
+                    <h2>web-разработчик<br><small>(без опыта)</small></h2>
+                    <p>г.Ульяновск</p>
+                </div>
             </div>
+            <contact-list class="person-info__right"/>            
         </div>
-        <contact-list class="header__right"/>
+        <skill-list />
     </header> 
     <div 
-        v-if="!isOpenHeader" 
+        v-if="!isHomePage" 
         class="header-tab"
-        @click="isPermittedHeader = !isPermittedHeader"
+        @click="isOpenHeader = !isOpenHeader"
     >
-        <span v-if="!isOpenHeader">Открыть резюме</span>
-        <span v-else>Скрыть</span>
+        <p v-if="!isOpenHeader">Показать инфо</p>
+        <p v-if="isOpenHeader">Скрыть инфо</p>
     </div> 
 </template>
 
 <script>
-import ContactList from  '@/components/ContactList.vue'
+import ContactList from  '@/components/ContactList.vue';
+import SkillList from '@/components/SkillList.vue';
 
 export default {
     name: 'AppHeader',
     components: {
-        ContactList
+        ContactList,
+        SkillList,
     },
     computed: {
-        isOpenHeader() {
-            if(this.$route.name == 'home' || this.isPermittedHeader) {
+        isHomePage() {
+            if(this.$route.name === 'home') {
+                console.log('true')
                 return true;
             } else {
+                console.log('false')
                 return false;
             }
         }
     },
     data() {
         return {
-            isPermittedHeader: false
+            isOpenHeader: false
         }
-    }
+    },
+    watch:{
+        $route (to, from){
+            if(to != from) {
+                this.isOpenHeader = false;
+            }
+        }
+    }    
 }
 </script>
 
 <style lang="scss" scoped>
 
-.header {
+header {
+    margin-top: 0;
+    transition: 0.5s;
+
+    &.hidden-header {
+        margin-top: -255px;
+        transition: 0.5s;
+        @media (max-width: $mobile-max) {
+            margin-top: -515px;        
+        }            
+    } 
+}
+
+.person-info {
     background-color: $zian;
     color: $beige;
     padding: 24px 128px;
@@ -74,29 +101,31 @@ export default {
 }
 .header-tab {
     background-color: $zian;
-    color: $beige;  
-    padding: 0px 128px; 
+    color: greenyellow;  
+    padding: 4px 128px; 
     font-size: 12px;      
     border-bottom: 1px solid rgb(75, 91, 112);
     cursor: pointer;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 0px 64px;
+        padding: 4px 64px;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 0px 64px;
+        font-size: 14px;         
+        padding: 16px 64px;
     }      
-    @media (max-width: $mobile-max) {   
-        padding: 0px 16px;      
+    @media (max-width: $mobile-max) {  
+        font-size: 14px;           
+        padding: 16px;      
     }        
 }
-.header__left {
+.person-info__left {
     display: flex; 
     @media (max-width: $mobile-max) {
         border-bottom: 1px solid grey;
         margin-bottom: 8px;
     }     
 }
-.header__image {   
+.person-info__image {   
     height: 160px;
     margin-right: 24px;
     @media (max-width: $mobile-max) {       
@@ -107,7 +136,7 @@ export default {
         border: 1px solid white;       
     }
 }
-.header__info {
+.person-info__info {
     h1 {
         font-size: 24px;
         font-weight: 400;
