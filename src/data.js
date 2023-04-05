@@ -113,19 +113,19 @@ const projects = [
         ]
     },
 
-    { // id: 7; Waybills
+    { // id: 7; Shop
         id: 7,
         isReady: false,
-        title: 'Waybills',
-        image: 'waybills',
-        github: 'https://github.com/Alwongs/ways-auth',
+        title: 'Shop',
+        image: 'shop',
+        github: 'https://github.com/Alwongs/dns',
         website: 'http://alwong.h1n.ru/',
-        description: 'Подготовка путевых листов автомобилей',
-        comments: 'Ждет решения о продолжении разработки',
+        description: 'Интернет магазин',
+        comments: 'В процессе разработки',
         stack: [
             {
                 id: 1,
-                title: 'Vue.js'
+                title: 'js'
             },                         
             {
                 id: 2,
@@ -133,7 +133,7 @@ const projects = [
             },                         
             {
                 id: 3,
-                title: 'laravel'
+                title: 'laravel 9'
             },                         
             {
                 id: 4,
