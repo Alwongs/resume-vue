@@ -10,7 +10,7 @@
 
                 <div class="person-info__info">         
                     <h1>Мартынов<br>Александр</h1>
-                    <h2>web-разработчик<br><small>(без опыта)</small></h2>
+                    <h2>web-разработчик</h2>
                     <p>г.Ульяновск</p>
                 </div>
             </div>
