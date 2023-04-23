@@ -21,12 +21,12 @@
 
                 <ul class="project-page__links">
                     <li class="project-page__link-github">
-                        <a :href="project.github">
+                        <a :href="project.github" target="_blank">
                             Репозиторий на github
                         </a>
                     </li>
                     <li class="project-page__link-website">
-                        <a :href="project.website">
+                        <a :href="project.website" target="_blank">
                             Перейти на сайт
                         </a>
                     </li>                    

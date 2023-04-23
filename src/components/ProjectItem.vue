@@ -31,7 +31,7 @@
             </div>
         </main>
         <footer class="portfolio-item__footer">
-            <a :href="project.github">
+            <a :href="project.github" target="_blank">
                 github
             </a>
 
@@ -39,7 +39,7 @@
                 &#9734;
             </span>
 
-            <a :href="project.website">
+            <a :href="project.website" target="_blank">
                 website
             </a>
         </footer>
