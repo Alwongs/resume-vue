@@ -21,9 +21,10 @@
 
                 <ul class="project-page__links">
                     <li class="project-page__link-github">
-                        <a :href="project.github" target="_blank">
+                        <a v-if="project.github !== ''" :href="project.github" target="_blank">
                             Репозиторий на github
                         </a>
+                        <span v-else >Репозиторий на github отсутствует</span>
                     </li>
                     <li class="project-page__link-website">
                         <a :href="project.website" target="_blank">

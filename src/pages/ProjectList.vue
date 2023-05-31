@@ -1,6 +1,6 @@
 <template>
     <section class="project-list-page">
-        <h2 class="project-list-page__title">Приложения</h2>
+        <h2 class="project-list-page__title">Мои работы</h2>
         <ul class="project-list-page__list">
             <project-item 
                 v-for="project in projects" 

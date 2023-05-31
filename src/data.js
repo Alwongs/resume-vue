@@ -115,7 +115,7 @@ const projects = [
 
     { // id: 7; Shop
         id: 7,
-        isReady: false,
+        isReady: true,
         title: 'Shop',
         image: 'shop',
         github: 'https://github.com/Alwongs/dns',
@@ -138,6 +138,35 @@ const projects = [
             {
                 id: 4,
                 title: 'hostiman.ru'
+            },                         
+        ]
+    },
+
+    { // id: 8; Shop
+        id: 8,
+        isReady: true,
+        title: 'Авиакомпания "Air Bridges"',
+        image: 'airlines',
+        github: '',
+        website: 'http://alwong9h.beget.tech/',
+        description: 'Итоговая работа для аттестации на курсе повышения квалификации в ТГУ (Томский Государственный Университет). Создан на CMS Drupal 9.',
+        comments: 'Разработка окончена',
+        stack: [
+            {
+                id: 1,
+                title: 'Drupal 9'
+            },                         
+            {
+                id: 2,
+                title: 'html'
+            },                         
+            {
+                id: 3,
+                title: 'css'
+            },                         
+            {
+                id: 4,
+                title: 'beget.tech'
             },                         
         ]
     },

@@ -31,11 +31,12 @@
             </div>
         </main>
         <footer class="portfolio-item__footer">
-            <a :href="project.github" target="_blank">
+            <a v-if="project.github !== ''" :href="project.github" target="_blank">
                 github
             </a>
+            <a v-else href="#">no github</a>
 
-            <span v-if="project.isReady">
+            <span v-if="project.isReady" title="Разработка закончена">
                 &#9734;
             </span>
 
@@ -148,6 +149,7 @@ export default {
     }
     span {
         color: yellow;
+        cursor: default;
     }
     a:before {
         content: '';        

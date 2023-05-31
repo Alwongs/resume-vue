@@ -5,8 +5,8 @@
         <li>JavaScript</li> 
         <li>Vue.js</li> 
         <li>PHP</li> 
-        <li>Laravel</li> 
-        <li>git</li>
+        <li>Laravel</li>
+        <li>Drupal</li>
     </ul>
 </template>
 
@@ -32,7 +32,7 @@ export default {
     }     
     @media (max-width: $mobile-max) {
         padding: 8px 16px 0;  
-        flex-direction: column;  
+        // flex-direction: column;  
         align-items: center;  
     }    
 }
