@@ -148,7 +148,7 @@ const projects = [
         title: 'Авиакомпания "Air Bridges"',
         image: 'airlines',
         github: '',
-        website: 'http://alwong9h.beget.tech/',
+        website: 'http://airbridges.alwong9h.beget.tech/',
         description: 'Итоговая работа для аттестации на курсе повышения квалификации в ТГУ (Томский Государственный Университет). Создан на CMS Drupal 9.',
         comments: 'Разработка окончена',
         stack: [
