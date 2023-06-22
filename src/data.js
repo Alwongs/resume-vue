@@ -2,21 +2,17 @@
 const projects = [
     { // id: 2; Organizer
         id: 2,
-        isReady: false,
+        isReady: true,
         title: 'Органайзер',
         image: 'organizer',
         github: 'https://github.com/Alwongs/org',
         website: 'http://organizer.alwong9h.beget.tech/',
-        description: 'Органайзер содержит несколько приложений для тайм-менеджмента',
-        comments: 'Планируется переделать полностью',
+        description: 'Органайзер содержит приложение напоминающее о важных делах и событий',
+        comments: 'Планируется пополнять другими полезными приложениями',
         stack: [
             {
                 id: 1,
                 title: 'Vue.js'
-            },                        
-            {
-                id: 2,
-                title: 'Vuetify'
             },                        
             {
                 id: 3,
