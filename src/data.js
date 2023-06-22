@@ -5,8 +5,8 @@ const projects = [
         isReady: false,
         title: 'Органайзер',
         image: 'organizer',
-        github: 'https://github.com/Alwongs/SPA-auth-Organizer',
-        website: 'http://o937876j.beget.tech',
+        github: 'https://github.com/Alwongs/org',
+        website: 'http://organizer.alwong9h.beget.tech/',
         description: 'Органайзер содержит несколько приложений для тайм-менеджмента',
         comments: 'Планируется переделать полностью',
         stack: [
