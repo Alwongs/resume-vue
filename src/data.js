@@ -109,36 +109,36 @@ const projects = [
         ]
     },
 
-    { // id: 7; Shop
-        id: 7,
-        isReady: true,
-        title: 'Shop',
-        image: 'shop',
-        github: 'https://github.com/Alwongs/dns',
-        website: 'http://alwong.h1n.ru/',
-        description: 'Интернет магазин',
-        comments: 'В процессе разработки',
-        stack: [
-            {
-                id: 1,
-                title: 'js'
-            },                         
-            {
-                id: 2,
-                title: 'scss'
-            },                         
-            {
-                id: 3,
-                title: 'laravel 9'
-            },                         
-            {
-                id: 4,
-                title: 'hostiman.ru'
-            },                         
-        ]
-    },
+    // { // id: 7; Shop
+        // id: 7,
+        // isReady: true,
+        // title: 'Shop',
+        // image: 'shop',
+        // github: 'https://github.com/Alwongs/dns',
+        // website: 'http://alwong.h1n.ru/',
+        // description: 'Интернет магазин',
+        // comments: 'В процессе разработки',
+        // stack: [
+        //     {
+        //         id: 1,
+        //         title: 'js'
+        //     },                         
+        //     {
+        //         id: 2,
+        //         title: 'scss'
+        //     },                         
+        //     {
+        //         id: 3,
+        //         title: 'laravel 9'
+        //     },                         
+        //     {
+        //         id: 4,
+        //         title: 'hostiman.ru'
+        //     },                         
+        // ]
+    // },
 
-    { // id: 8; Shop
+    { // id: 8; Air Bridges
         id: 8,
         isReady: true,
         title: 'Авиакомпания "Air Bridges"',
