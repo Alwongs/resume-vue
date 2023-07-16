@@ -167,7 +167,7 @@ const projects = [
         ]
     },
     { // id: 8; Air Bridges
-        id: 8,
+        id: 9,
         isReady: true,
         title: 'Спецтранспорт UAZ GAZ',
         image: 'uaz-gaz',
