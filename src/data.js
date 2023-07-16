@@ -166,6 +166,30 @@ const projects = [
             },                         
         ]
     },
+    { // id: 8; Air Bridges
+        id: 8,
+        isReady: true,
+        title: 'Спецтранспорт UAZ GAZ',
+        image: 'uaz-gaz',
+        github: 'https://github.com/Alwongs/test-task.git',
+        website: 'https://alwongs.github.io/test-task/',
+        description: 'Тестовое задание на вакансию web-разработчик',
+        comments: 'Разработка окончена',
+        stack: [                       
+            {
+                id: 1,
+                title: 'html'
+            },                         
+            {
+                id: 2,
+                title: 'scss'
+            },                         
+            {
+                id: 3,
+                title: 'js'
+            },                         
+        ]
+    },
 ];
 
 export default projects;
