@@ -6,7 +6,6 @@
         <li>Vue.js</li> 
         <li>PHP</li> 
         <li>Laravel</li>
-        <li>Drupal</li>
     </ul>
 </template>
 

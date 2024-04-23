@@ -1,23 +1,22 @@
 <template>
-    <div class="education-info">
-        <h3>Обучение:</h3>
+    <div class="additional-info">
+        <h3>Дополнительные навыки:</h3>
 
         <ul>
-            <li>Курс Школы веб-разработки Simtech ( 2001г. )</li>
-            <li>Курс повышения квалификаци: веб-программист. Создание и продвижение сайта с нуля. ТГУ (Томский Государственный Университет) 2023г.</li>
+            <li>Английский - средний уровень</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'EducationInfo'
+    name: 'AdditionalInfo'
 }
 </script>
 
 <style lang="scss" scoped>
 
-.education-info {
+.additional-info {
     color: $beige;
     background-color: $zian;
     border-bottom: 1px solid rgb(75, 91, 112);    
@@ -52,5 +51,16 @@ ul {
 li {
     font-style: italic;
     margin-bottom: 8px;
+}
+li ul {
+        list-style-type: none; 
+        li:before {
+            content: "—";
+            position: relative;
+            left: -5px;
+        }
+}
+li p {
+    margin-bottom: 6px;
 }
 </style>

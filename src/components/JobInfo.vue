@@ -1,23 +1,28 @@
 <template>
-    <div class="education-info">
-        <h3>Обучение:</h3>
+    <div class="job-info">
+        <h3>Работа:</h3>
 
         <ul>
-            <li>Курс Школы веб-разработки Simtech ( 2001г. )</li>
-            <li>Курс повышения квалификаци: веб-программист. Создание и продвижение сайта с нуля. ТГУ (Томский Государственный Университет) 2023г.</li>
+            <li>
+                <p>Cart-Power ( август 2023г. - апрель 2024г. )</p>
+                <ul>
+                    <li>разработка новых функциональных возможностей для интернет-магазинов на платформе CS-Cart;</li>
+                    <li>отладка и исправление ошибок в работе программ и модулей интернет-магазинов;</li>
+                </ul>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'EducationInfo'
+    name: 'JobInfo'
 }
 </script>
 
 <style lang="scss" scoped>
 
-.education-info {
+.job-info {
     color: $beige;
     background-color: $zian;
     border-bottom: 1px solid rgb(75, 91, 112);    
@@ -52,5 +57,16 @@ ul {
 li {
     font-style: italic;
     margin-bottom: 8px;
+}
+li ul {
+        list-style-type: none; 
+        li:before {
+            content: "—";
+            position: relative;
+            left: -5px;
+        }
+}
+li p {
+    margin-bottom: 6px;
 }
 </style>

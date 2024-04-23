@@ -5,6 +5,8 @@
             <contact-list />            
         </div>
         <education-info />
+        <job-info />
+        <additional-info />
         <skill-list />
     </header> 
 </template>
@@ -13,6 +15,8 @@
 import BaseInfo from  '@/components/BaseInfo.vue';
 import ContactList from  '@/components/ContactList.vue';
 import EducationInfo from  '@/components/EducationInfo.vue';
+import JobInfo from  '@/components/JobInfo.vue';
+import AdditionalInfo from  '@/components/AdditionalInfo.vue';
 import SkillList from '@/components/SkillList.vue';
 
 export default {
@@ -21,6 +25,8 @@ export default {
         BaseInfo,
         ContactList,
         EducationInfo,
+        JobInfo,
+        AdditionalInfo,
         SkillList,
     },
     // computed: {
