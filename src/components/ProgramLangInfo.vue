@@ -1,28 +1,27 @@
 <template>
-    <div class="job-info">
-        <h3>Опыт работы:</h3>
+    <div class="program-lang-info">
+        <h3>Знание основ:</h3>
 
-        <ul>
-            <li>
-                <p>Cart-Power ( август 2023г. - апрель 2024г. )</p>
-                <ul>
-                    <li>разработка новых функциональных возможностей для интернет-магазинов на платформе CS-Cart;</li>
-                    <li>отладка и исправление ошибок в работе программ и модулей интернет-магазинов;</li>
-                </ul>
-            </li>
+        <ul class="info__skill-list">
+            <li>HTML</li> 
+            <li>CSS</li> 
+            <li>JavaScript</li> 
+            <li>Vue.js</li> 
+            <li>PHP - </li> 
+            <li>Laravel</li>
         </ul>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'JobInfo'
+    name: 'ProgramLangInfo'
 }
 </script>
 
 <style lang="scss" scoped>
 
-.job-info {
+.program-lang-info {
     color: $beige;
     background-color: $zian;
     border-bottom: 1px solid rgb(75, 91, 112);    

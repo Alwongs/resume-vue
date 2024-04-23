@@ -1,12 +1,5 @@
 <template>
-    <ul class="info__skill-list">
-        <li>HTML</li> 
-        <li>CSS</li> 
-        <li>JavaScript</li> 
-        <li>Vue.js</li> 
-        <li>PHP</li> 
-        <li>Laravel</li>
-    </ul>
+    <input type="hidden" >
 </template>
 
 <script>
