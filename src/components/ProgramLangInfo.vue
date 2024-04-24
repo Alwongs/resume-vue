@@ -7,7 +7,7 @@
             <li>CSS</li> 
             <li>JavaScript</li> 
             <li>Vue.js</li> 
-            <li>PHP - </li> 
+            <li>PHP</li> 
             <li>Laravel</li>
         </ul>
     </div>
