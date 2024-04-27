@@ -17,10 +17,8 @@ export default {
 <style lang="scss" scoped>
 
 .additional-info {
-    color: $beige;
-    background-color: $zian;
     border-bottom: 1px solid rgb(75, 91, 112);    
-    padding: 16px 128px 16px;
+    padding: 16px;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
         padding: 10px 64px 10px;
     }     

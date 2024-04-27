@@ -1,10 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ProjectList from '../pages/ProjectList.vue'
+import SkillPage from '../pages/SkillPage.vue'
 
 const routes = [
     {
         path: '/',
         name: 'home',
+        component: SkillPage
+    },
+    {
+        path: '/projects',
+        name: 'projects',
         component: ProjectList
     },
     {

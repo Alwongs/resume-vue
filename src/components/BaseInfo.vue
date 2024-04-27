@@ -44,7 +44,10 @@ export default {
         font-size: 24px;
         font-weight: 400;
         margin-bottom: 16px;
-        letter-spacing: 1.5px;       
+        letter-spacing: 1.5px;    
+        @media (max-width: $mobile-max) {
+            font-size: 22px;  
+        }    
     }
     h2 {
         font-size: 20px;        

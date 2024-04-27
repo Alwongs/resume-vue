@@ -4,55 +4,48 @@
             <base-info />
             <contact-list />            
         </div>
-        <education-info />
-        <job-info />
-        <program-lang-info />
-        <additional-info />
-        <skill-list />
+        <nav class="navigation">
+            <router-link to='/'>Навыки</router-link>
+            <router-link to='/projects'>Проекты</router-link>
+        </nav>
     </header> 
 </template>
 
 <script>
 import BaseInfo from  '@/components/BaseInfo.vue';
 import ContactList from  '@/components/ContactList.vue';
-import EducationInfo from  '@/components/EducationInfo.vue';
-import JobInfo from  '@/components/JobInfo.vue';
-import AdditionalInfo from  '@/components/AdditionalInfo.vue';
-import ProgramLangInfo from  '@/components/ProgramLangInfo.vue';
-import SkillList from '@/components/SkillList.vue';
 
 export default {
     name: 'AppHeader',
     components: {
         BaseInfo,
         ContactList,
-        EducationInfo,
-        JobInfo,
-        AdditionalInfo,
-        ProgramLangInfo,
-        SkillList,
-    },
-    // computed: {
-    //     isHomePage() {
-    //         return (this.$route.name === 'home') ? true : false;
-    //     }
-    // },
-    // data() {
-    //     return {
-    //         isOpenHeader: false
-    //     }
-    // },
-    // watch:{
-    //     $route (to, from) {
-    //         if(to != from) {
-    //             this.isOpenHeader = false;
-    //         }
-    //     }
-    // }    
+    }, 
 }
 </script>
 
 <style lang="scss" scoped>
+
+.navigation {
+    background-color: $zian;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 40px;
+    a {
+        color: white;
+        text-decoration: none;
+        transition: 0.4s;
+    }
+    a.router-link-active {
+        color: rgb(255, 196, 0);
+        text-decoration: underline;
+    }
+    a:hover {
+        color: rgb(255, 196, 0);
+    }
+}
 
 .person-info {
     background-color: $zian;

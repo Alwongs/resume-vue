@@ -21,11 +21,27 @@
 export default {
     computed: {
         buildBreadcrumbs() {
-            if (this.$route.name === 'project') {
+            if (this.$route.name === 'home') {
+
                 return {
-                    home: 'ГЛАВНАЯ',
-                    app: 'ПРОСМОТР ПРИЛОЖЕНИЯ'
+                    home: 'Главная',
+                    app: ''
                 }
+                
+            } else if (this.$route.name === 'projects') {
+
+                return {
+                    home: 'Главная',
+                    app: 'проекты'
+                }
+
+            } else if (this.$route.name === 'project') {
+
+                return {
+                    home: 'Главная',
+                    app: 'проект'
+                }
+
             } else {
                 return null
             } 
@@ -37,18 +53,18 @@ export default {
 <style lang="scss" scoped>
 
 .breadcrumbs-component {
-    padding: 4px 128px 0;
+    padding: 5px 128px 5px;
     display: flex;
     flex-wrap: wrap;
     @media (min-width: $desktop-min) and (max-width: $desktop-max) {
-        padding: 6px 64px 0;
+        padding: 6px 64px 5px;
     }     
     @media (min-width: $tablet-min) and (max-width: $tablet-max) {
-        padding: 6px 64px 0;
+        padding: 6px 64px 5px;
     }     
     @media (max-width: $mobile-max) {
-        padding: 6px 16px 0;   
-        margin-bottom: 8px;   
+        padding: 6px 16px 5px;   
+        margin-bottom: 10px;   
     }    
     &__devider {
         background-image: url("../assets/images/icons/breadcrumbs.svg");   

@@ -21,7 +21,36 @@ const projects = [
             },                         
             {
                 id: 3,
-                title: 'javascript'
+                title: 'js'
+            },                         
+        ]
+    },
+
+    { // id: 1; U-talent
+        id: 2,
+        isReady: true,
+        title: 'Reminder',
+        image: 'reminder',
+        github: 'https://github.com/Alwongs/laravel-8',
+        website: 'https://alwong.ru/',
+        description: 'Помогает пользователю не забыть о важных событиях',
+        comments: 'Сайт в разработке',
+        stack: [
+            {
+                id: 1,
+                title: 'Laravel'
+            },   
+            {
+                id: 1,
+                title: 'Smarty'
+            },                    
+            {
+                id: 2,
+                title: 'scss'
+            },                         
+            {
+                id: 3,
+                title: 'js'
             },                         
         ]
     },

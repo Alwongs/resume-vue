@@ -1,4 +1,5 @@
 <template>
+    <div  id="top"></div>
     <app-header />
 
     <bread-crumbs />
@@ -36,6 +37,15 @@ html, body {
     flex-direction: column;
     min-height: 100%;
 }
+
+#top {
+    &.transparent {
+        transition: 0.5s;
+        background: transparent;
+        box-shadow: none;        
+    }
+}
+
 .page-view {
     flex-grow: 1;
 }
