@@ -32,7 +32,7 @@ const projects = [
         title: 'Reminder',
         image: 'reminder',
         github: 'https://github.com/Alwongs/laravel-8',
-        website: 'https://alwong.ru/',
+        website: 'https://alwong9h.beget.tech/',
         description: 'Помогает пользователю не забыть о важных событиях',
         comments: 'Сайт в разработке',
         stack: [
