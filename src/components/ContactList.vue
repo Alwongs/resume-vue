@@ -94,7 +94,8 @@ export default {
         position: relative;
         font-size: 16px;
         font-style: italic;
-        margin-bottom: 8px;         
+        margin-bottom: 8px;     
+
     }
     li::before {
         content: '';
@@ -104,7 +105,7 @@ export default {
         height: 24px;
         background-size: 65%;
         left: -22px;
-        top: 3px;
+        top: 3px;         
     } 
     &__whatsapp {
         &::before {
@@ -132,7 +133,12 @@ export default {
         }
     }    
     a {
-        color: white;   
+        color: white;  
+        transition: 0.3s;
+        &:hover {
+            color: rgb(248, 223, 0);
+            text-shadow: 2px 2px 5px rgba(0, 204, 255, 0.8);
+        }         
     }
 }
 </style>
