@@ -15,7 +15,7 @@
             </div>
             <div class="portfolio-item__image-block">
                 <img 
-                    :src="require(`@/assets/images/preview/${project.image}.jpg`)" 
+                    :src="require(`@/assets/images/preview/${project.image}`)" 
                     alt="image"
                 >
             </div>

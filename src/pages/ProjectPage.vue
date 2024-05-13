@@ -6,7 +6,7 @@
         <main class="project-page__main">
             <div class="project-page__image-block">
                 <img 
-                    :src="require(`@/assets/images/preview/${project.image}.jpg`)" 
+                    :src="require(`@/assets/images/preview/${project.image}`)" 
                     :alt="project.image"
                 >
             </div>
