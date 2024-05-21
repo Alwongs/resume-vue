@@ -26,34 +26,34 @@ const projects = [
         ]
     },
 
-    { // id: 2; Reminder
-        id: 2,
-        isReady: false,
-        title: 'Reminder',
-        image: 'reminder.jpg',
-        github: 'https://github.com/Alwongs/laravel-8',
-        website: 'http://alwong9h.beget.tech/',
-        description: 'Помогает пользователю не забыть о важных событиях',
-        comments: 'Сайт в разработке',
-        stack: [
-            {
-                id: 1,
-                title: 'Laravel'
-            },   
-            {
-                id: 1,
-                title: 'Blade'
-            },                    
-            {
-                id: 2,
-                title: 'scss'
-            },                         
-            {
-                id: 3,
-                title: 'js'
-            },                         
-        ]
-    },
+    // { // id: 2; Reminder
+    //     id: 2,
+    //     isReady: false,
+    //     title: 'Reminder',
+    //     image: 'reminder.jpg',
+    //     github: 'https://github.com/Alwongs/laravel-8',
+    //     website: 'http://alwong9h.beget.tech/',
+    //     description: 'Помогает пользователю не забыть о важных событиях',
+    //     comments: 'Сайт в разработке',
+    //     stack: [
+    //         {
+    //             id: 1,
+    //             title: 'Laravel'
+    //         },   
+    //         {
+    //             id: 1,
+    //             title: 'Blade'
+    //         },                    
+    //         {
+    //             id: 2,
+    //             title: 'scss'
+    //         },                         
+    //         {
+    //             id: 3,
+    //             title: 'js'
+    //         },                         
+    //     ]
+    // },
 
     { // id: 3; Gallery
         id: 3,
