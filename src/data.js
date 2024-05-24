@@ -83,6 +83,30 @@ const projects = [
             },                         
         ]
     },
+    { // id: 4; Resume
+        id: 4,
+        isReady: true,
+        title: 'Resume',
+        image: 'resume.png',
+        github: 'https://github.com/Alwongs/resume-vue',
+        website: 'https://alwongs.github.io/resume-vue/',
+        description: 'Информация о разработчике и его работы',
+        comments: 'Разработка завершена',
+        stack: [
+            {
+                id: 1,
+                title: 'hmtl'
+            },                    
+            {
+                id: 2,
+                title: 'scss'
+            },                         
+            {
+                id: 3,
+                title: 'Vue'
+            },                         
+        ]
+    },    
 ];
 
 export default projects;

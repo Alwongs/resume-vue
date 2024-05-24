@@ -136,8 +136,9 @@ export default {
         color: white;  
         transition: 0.3s;
         &:hover {
-            color: rgb(248, 223, 0);
-            text-shadow: 2px 2px 5px rgba(0, 204, 255, 0.8);
+            // color: rgb(248, 223, 0);
+            // text-shadow: 2px 2px 5px rgba(0, 204, 255, 0.8);
+            color: rgba(255, 255, 255, 0.4);
         }         
     }
 }

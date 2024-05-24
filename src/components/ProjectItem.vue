@@ -102,6 +102,7 @@ export default {
     color: transparent;
     overflow: hidden;
     cursor: pointer;
+    transition: 0.4s;
     &:hover {
         background-color: rgba($beige, 0.9);
         color: darker($project-item-color, 4);
